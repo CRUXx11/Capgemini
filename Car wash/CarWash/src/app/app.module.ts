@@ -8,6 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatIconModule } from '@angular/material/icon';
 import { SigninService } from './signin/signin.service';
 import { SignupService } from './signup/signup.service';
+// import { TokenInterceptorService } from './token-interceptor.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +26,7 @@ import { SignupService } from './signup/signup.service';
   providers: [
     // {
     // provide: HTTP_INTERCEPTORS,
-    // useClass:SignupService,
+    // useClass:TokenInterceptorService,
     // multi:true
     // }
   ],

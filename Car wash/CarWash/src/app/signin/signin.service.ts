@@ -10,7 +10,7 @@ export class SigninService {
    constructor(private http:HttpClient) { }
 
   public generatetoken(user) {
-    return this.http.post('http://localhost:8080/authenticate', user, { responseType: 'text' as 'json' })
+    return this.http.post('http://localhost:9090/authenticate', user, { responseType: 'text' as 'json' })
       .pipe(catchError(this.errorHandler));
          
   }

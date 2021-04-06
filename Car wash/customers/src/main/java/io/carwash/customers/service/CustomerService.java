@@ -27,7 +27,7 @@ public class CustomerService implements UserDetailsService {
 
     //Create operation
     public Customer create(Customer customer) {
-        return customerRepo.insert(customer);
+        return customerRepo.save(customer);
     }
     //Retrieve operation
     public List<Customer> getAll(){

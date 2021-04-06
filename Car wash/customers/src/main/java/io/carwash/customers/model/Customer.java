@@ -21,14 +21,7 @@ public class Customer implements Serializable{
         this.contact = contact;
     }
 
-    public Customer(String email, String password) {
-        this.password = password;
-        this.email = email;
-    }
-
-    public Customer() {
-
-    }
+   
 
     public String getName() {
         return Name;
