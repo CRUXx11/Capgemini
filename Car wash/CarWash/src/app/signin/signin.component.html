@@ -1,0 +1,90 @@
+<div class="nav-bar">
+  <div class="container">
+      <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+          <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+              <div class="navbar-nav mr-auto">
+                <a routerLink="" class="nav-item nav-link px-4">Home</a>
+                <a routerLink="/services" class="nav-item px-4 nav-link">Services</a>
+                <a routerLink="/price" class="nav-item nav-link px-4">Price</a>
+                <a routerLink="/about" class="nav-item nav-link px-4">About Us</a>
+                <a routerLink="/Contact" class="nav-item nav-link px-4">Contact</a>
+                <a routerLink="/signup" class="nav-item nav-link px-4 active">My Profile</a>
+              </div>
+              <div class="ml-auto">
+                  
+                  <a class="btn btn-custom" href="#">Book now</a>
+              </div>
+          </div>
+      </nav>
+  </div>
+</div>
+<img src="../../assets/imgs/signup.jpg" class="img-fluid" />
+<div class="signin">
+  <div class="container-fluid">
+    <h1>Sign In</h1>
+    <div class="alert alert-danger" *ngIf="errmsg">
+      {{ errmsg }}
+    </div>
+    <form
+      #userform="ngForm"
+      *ngIf="!submitted"
+      (ngSubmit)="onsubmit()"
+      novalidate
+    >
+    <div class="form-group">
+        <span class="material-icons">email</span>
+        <label class="form-label">Email</label>
+        <input
+          type="email"
+          class="form-control"
+          required
+          #email="ngModel"
+          name="email"
+          placeholder="Email"
+          [(ngModel)]="usermodel.email"
+        />
+      </div>
+     
+      <div class="form-group">
+        <span class="material-icons">lock</span>
+        <label class="form-label">Password</label>
+        <input
+          type="password"
+          class="form-control"
+          required
+          #password="ngModel"
+          [class.is-invalid]="password.invalid && password.touched"
+          name="password"
+          placeholder="Password"
+          [(ngModel)]="usermodel.password"
+        />
+        <small
+          [class.d-none]="password.valid || password.untouched"
+          class="text-danger"
+          >Password is required</small
+        >
+      </div>
+      <br />
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button
+        [disabled]="userform.form.invalid"
+        type="submit"
+        class="btn btn-dark"
+      >
+        Submit
+      </button>
+      <a routerLink="/signup" onclick="toggleform">
+        <h1 class="alreadyuser">Not a user?Signup</h1>
+      </a>
+      {{usermodel|json}}
+      {{jwttoken}}
+    </form>
+  </div>
+</div>
+//////////
+
+
+
+

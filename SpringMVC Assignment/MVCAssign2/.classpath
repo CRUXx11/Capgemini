@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="target"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk-15.0.2">
+		<attributes>
+			<attribute name="module" value="true"/>
+			<attribute name="owner.project.facets" value="java"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/org.eclipse.jst.server.tomcat.runtimeTarget/Apache Tomcat v10.0">
+		<attributes>
+			<attribute name="owner.project.facets" value="jst.web"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="lib" path="C:/Users/lenovo/Downloads/Compressed/javax.servlet-api-4.0.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/lenovo/Downloads/Compressed/spring-framework-5.3.3/libs/spring-aop-5.3.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/lenovo/Downloads/Compressed/spring-framework-5.3.3/libs/spring-aop-5.3.3-javadoc.jar"/>
+	<classpathentry kind="lib" path="C:/Users/lenovo/Downloads/Compressed/spring-framework-5.3.3/libs/spring-aop-5.3.3-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/lenovo/Downloads/Compressed/spring-framework-5.3.3/libs/spring-aspects-5.3.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/lenovo/Downloads/Compressed/spring-framework-5.3.3/libs/spring-aspects-5.3.3-javadoc.jar"/>
+	<classpathentry kind="lib" path="C:/Users/lenovo/Downloads/Compressed/spring-framework-5.3.3/libs/spring-aspects-5.3.3-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/lenovo/Downloads/Compressed/spring-framework-5.3.3/libs/spring-beans-5.3.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/lenovo/Downloads/Compressed/spring-framework-5.3.3/libs/spring-beans-5.3.3-javadoc.jar"/>
+	<classpathentry kind="lib" path="C:/Users/lenovo/Downloads/Compressed/spring-framework-5.3.3/libs/spring-beans-5.3.3-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/lenovo/Downloads/Compressed/spring-framework-5.3.3/libs/spring-context-5.3.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/lenovo/Downloads/Compressed/spring-framework-5.3.3/libs/spring-context-5.3.3-javadoc.jar"/>
+	<classpathentry kind="lib" path="C:/Users/lenovo/Downloads/Compressed/spring-framework-5.3.3/libs/spring-context-5.3.3-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/lenovo/Downloads/Compressed/spring-framework-5.3.3/libs/spring-context-indexer-5.3.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/lenovo/Downloads/Compressed/spring-framework-5.3.3/libs/spring-context-indexer-5.3.3-javadoc.jar"/>
+	<classpathentry kind="lib" path="C:/Users/lenovo/Downloads/Compressed/spring-framework-5.3.3/libs/spring-context-indexer-5.3.3-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/lenovo/Downloads/Compressed/spring-framework-5.3.3/libs/spring-context-support-5.3.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/lenovo/Downloads/Compressed/spring-framework-5.3.3/libs/spring-context-support-5.3.3-javadoc.jar"/>
+	<classpathentry kind="lib" path="C:/Users/lenovo/Downloads/Compressed/spring-framework-5.3.3/libs/spring-context-support-5.3.3-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/lenovo/Downloads/Compressed/spring-framework-5.3.3/libs/spring-core-5.3.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/lenovo/Downloads/Compressed/spring-framework-5.3.3/libs/spring-core-5.3.3-javadoc.jar"/>
+	<classpathentry kind="lib" path="C:/Users/lenovo/Downloads/Compressed/spring-framework-5.3.3/libs/spring-core-5.3.3-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/lenovo/Downloads/Compressed/spring-framework-5.3.3/libs/spring-expression-5.3.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/lenovo/Downloads/Compressed/spring-framework-5.3.3/libs/spring-expression-5.3.3-javadoc.jar"/>
+	<classpathentry kind="lib" path="C:/Users/lenovo/Downloads/Compressed/spring-framework-5.3.3/libs/spring-expression-5.3.3-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/lenovo/Downloads/Compressed/spring-framework-5.3.3/libs/spring-instrument-5.3.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/lenovo/Downloads/Compressed/spring-framework-5.3.3/libs/spring-instrument-5.3.3-javadoc.jar"/>
+	<classpathentry kind="lib" path="C:/Users/lenovo/Downloads/Compressed/spring-framework-5.3.3/libs/spring-instrument-5.3.3-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/lenovo/Downloads/Compressed/spring-framework-5.3.3/libs/spring-jcl-5.3.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/lenovo/Downloads/Compressed/spring-framework-5.3.3/libs/spring-jcl-5.3.3-javadoc.jar"/>
+	<classpathentry kind="lib" path="C:/Users/lenovo/Downloads/Compressed/spring-framework-5.3.3/libs/spring-jcl-5.3.3-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/lenovo/Downloads/Compressed/spring-framework-5.3.3/libs/spring-jdbc-5.3.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/lenovo/Downloads/Compressed/spring-framework-5.3.3/libs/spring-jdbc-5.3.3-javadoc.jar"/>
+	<classpathentry kind="lib" path="C:/Users/lenovo/Downloads/Compressed/spring-framework-5.3.3/libs/spring-jdbc-5.3.3-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/lenovo/Downloads/Compressed/spring-framework-5.3.3/libs/spring-jms-5.3.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/lenovo/Downloads/Compressed/spring-framework-5.3.3/libs/spring-jms-5.3.3-javadoc.jar"/>
+	<classpathentry kind="lib" path="C:/Users/lenovo/Downloads/Compressed/spring-framework-5.3.3/libs/spring-jms-5.3.3-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/lenovo/Downloads/Compressed/spring-framework-5.3.3/libs/spring-messaging-5.3.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/lenovo/Downloads/Compressed/spring-framework-5.3.3/libs/spring-messaging-5.3.3-javadoc.jar"/>
+	<classpathentry kind="lib" path="C:/Users/lenovo/Downloads/Compressed/spring-framework-5.3.3/libs/spring-messaging-5.3.3-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/lenovo/Downloads/Compressed/spring-framework-5.3.3/libs/spring-orm-5.3.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/lenovo/Downloads/Compressed/spring-framework-5.3.3/libs/spring-orm-5.3.3-javadoc.jar"/>
+	<classpathentry kind="lib" path="C:/Users/lenovo/Downloads/Compressed/spring-framework-5.3.3/libs/spring-orm-5.3.3-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/lenovo/Downloads/Compressed/spring-framework-5.3.3/libs/spring-oxm-5.3.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/lenovo/Downloads/Compressed/spring-framework-5.3.3/libs/spring-oxm-5.3.3-javadoc.jar"/>
+	<classpathentry kind="lib" path="C:/Users/lenovo/Downloads/Compressed/spring-framework-5.3.3/libs/spring-oxm-5.3.3-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/lenovo/Downloads/Compressed/spring-framework-5.3.3/libs/spring-r2dbc-5.3.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/lenovo/Downloads/Compressed/spring-framework-5.3.3/libs/spring-r2dbc-5.3.3-javadoc.jar"/>
+	<classpathentry kind="lib" path="C:/Users/lenovo/Downloads/Compressed/spring-framework-5.3.3/libs/spring-r2dbc-5.3.3-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/lenovo/Downloads/Compressed/spring-framework-5.3.3/libs/spring-test-5.3.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/lenovo/Downloads/Compressed/spring-framework-5.3.3/libs/spring-test-5.3.3-javadoc.jar"/>
+	<classpathentry kind="lib" path="C:/Users/lenovo/Downloads/Compressed/spring-framework-5.3.3/libs/spring-test-5.3.3-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/lenovo/Downloads/Compressed/spring-framework-5.3.3/libs/spring-tx-5.3.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/lenovo/Downloads/Compressed/spring-framework-5.3.3/libs/spring-tx-5.3.3-javadoc.jar"/>
+	<classpathentry kind="lib" path="C:/Users/lenovo/Downloads/Compressed/spring-framework-5.3.3/libs/spring-tx-5.3.3-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/lenovo/Downloads/Compressed/spring-framework-5.3.3/libs/spring-web-5.3.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/lenovo/Downloads/Compressed/spring-framework-5.3.3/libs/spring-web-5.3.3-javadoc.jar"/>
+	<classpathentry kind="lib" path="C:/Users/lenovo/Downloads/Compressed/spring-framework-5.3.3/libs/spring-web-5.3.3-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/lenovo/Downloads/Compressed/spring-framework-5.3.3/libs/spring-webflux-5.3.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/lenovo/Downloads/Compressed/spring-framework-5.3.3/libs/spring-webflux-5.3.3-javadoc.jar"/>
+	<classpathentry kind="lib" path="C:/Users/lenovo/Downloads/Compressed/spring-framework-5.3.3/libs/spring-webflux-5.3.3-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/lenovo/Downloads/Compressed/spring-framework-5.3.3/libs/spring-webmvc-5.3.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/lenovo/Downloads/Compressed/spring-framework-5.3.3/libs/spring-webmvc-5.3.3-javadoc.jar"/>
+	<classpathentry kind="lib" path="C:/Users/lenovo/Downloads/Compressed/spring-framework-5.3.3/libs/spring-webmvc-5.3.3-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/lenovo/Downloads/Compressed/spring-framework-5.3.3/libs/spring-websocket-5.3.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/lenovo/Downloads/Compressed/spring-framework-5.3.3/libs/spring-websocket-5.3.3-javadoc.jar"/>
+	<classpathentry kind="lib" path="C:/Users/lenovo/Downloads/Compressed/spring-framework-5.3.3/libs/spring-websocket-5.3.3-sources.jar"/>
+	<classpathentry kind="output" path="build/classes"/>
+</classpath>

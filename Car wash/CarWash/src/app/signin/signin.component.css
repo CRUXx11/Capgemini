@@ -1,0 +1,123 @@
+.btn.btn-custom {
+    padding: 10px 30px 12px 30px;
+    text-align: center; 
+    font-size: 16px;
+    font-weight: 800;
+    color: #ffffff;
+    background: black;
+    border: solid white;
+    border-radius: 60px;
+    box-shadow: inset 0 0 0 0 #202C45;
+    transition: ease-in-out 0.5s;
+    -webkit-transition: ease-in-out 0.5s;
+    -moz-transition: ease-in-out 0.5s;
+}
+
+.btn.btn-custom:hover {
+    color: black;
+    background: black;
+    box-shadow: inset 200px 0 0 0 orange;
+}
+/*
+.btn:focus,
+.form-control:focus {
+    box-shadow: none;
+} */
+
+.container-fluid {
+    max-width: 1366px;
+}
+.nav-bar {
+    position: relative;
+    background: black;
+}
+.nav-bar .nav-sticky {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
+    z-index: 11;
+}
+.nav-bar .navbar {
+    padding: 20px 0;
+    background: black !important;
+    transition: .3s;
+}
+.nav-bar .nav-sticky .navbar {
+    padding: 5px 0;
+}
+.navbar-dark .navbar-nav .nav-link,
+.navbar-dark .navbar-nav .nav-link:focus,
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+    color: #ffffff;
+    padding: 15px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    
+}
+.navbar-dark .navbar-nav .nav-link:hover{
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    color: yellow;
+  }
+  .navbar-dark .navbar-nav .nav-link {
+    border-bottom: 2px solid transparent;
+  }
+  
+  .navbar-dark .navbar-nav .nav-link:hover {
+    border-bottom: 2px solid yellow;
+    border-radius: 25%;
+    color: yellow;
+  } 
+  #navbarCollapse .navbar-nav .active{
+    border-bottom: 2px solid yellow;
+    border-width: 3px;
+    border-radius: 25%;
+    color: yellow;
+}
+.img-fluid{
+    max-width: 25%;
+     margin-left: 10%;
+     margin-top: 10%;
+ }
+ .signin h1{
+     margin-left: 160px;
+     font-weight: 1000;
+     color: green;
+     text-decoration: underline solid green;
+ }
+ .signin .alreadyuser{
+     margin-top: -35px;
+ }
+ .signin{
+     padding:25px;
+     padding-top:30px;
+     height: 500px;
+     width: 45%;
+     border:2px solid white;
+     margin-left: 40%;
+     margin-top: -30%;
+ }
+ .form-label{
+    font-size:19px;
+    margin-left:10px;
+    color:black;
+ }
+ 
+ .form-control{
+     width:80%;
+     margin-left:5%;
+     color:black;
+     border-color: black;
+ }
+ .material-icons{
+     display:inline-flex;
+     vertical-align:-5px;
+     
+ }
+ small{
+     margin-left:7%;
+ }

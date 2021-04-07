@@ -1,0 +1,27 @@
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 10rv;
+    background-color: black;
+    color: white;
+  }
+ 
+.link,.blackButton{
+    color: white;
+   text-decoration: none;
+   width: 25%;
+}
+.link:hover{
+    background-color: gray;
+}
+.whiteButton{
+    background-color: pink;
+}
+.box{
+    background-color: yellow;
+    height: 30px;
+    width: 100px;
+    margin-left: 52%;
+    margin-top: -50px;
+}

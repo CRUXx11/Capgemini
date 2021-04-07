@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean class="assignments.assignment2.classes.Question" name="question1">
+        <property name="questionId" value="100" />
+        <property name="question" value="What is Java ? What are Spring frameworks ? And its benefits ?" />
+        <property name="answerList">
+            <list>
+                <value>"Java is an Object-Oriented Language."</value>
+                <value>"Java uses JVM (Java Virtual Machine)."</value>
+                <value>"JVM is responsible for conversion of java into byte-code."</value>
+                <value>"It also supports C/C++ type declaration."</value>
+            </list>
+        </property>
+        <property name="answerSet">
+            <set>
+                <value>"Java has many frameworks."</value>
+                <value>"Spring Orm"</value>
+                <value>"Spring Jdbc"</value>
+                <value>"Spring Security"</value>
+                <value>"SpringBoot"</value>
+            </set>
+        </property>
+        <property name="answerMap">
+            <props>
+                <prop key="1">"Java is a widely used language."</prop>
+                <prop key="2">"Java's JVM compiler makes it a platform independent language."</prop>
+                <prop key="3">"Java has many frameworks for different development fields."</prop>
+                <prop key="4">"Java can be used for Android, Software, Web Development and for many other fields."</prop>
+            </props>
+        </property>
+    </bean>
+
+</beans>

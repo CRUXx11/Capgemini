@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+        <bean class="assignments.assignment1.classes.Address" name="address1">
+            <property name="street" value="Street 1, Kanji mohalla" />
+            <property name="city" value="Mumbai" />
+            <property name="country" value="India" />
+            <property name="state" value="Maharashtra" />
+            <property name="zip" value="613270" />
+        </bean>
+
+        <bean class="assignments.assignment1.classes.Customer" name="customer1">
+            <property name="customerName" value="Prathamesh Kathade" />
+            <property name="customerId"  value="11704058" />
+            <property name="customerContact" value="9882628704" />
+            <property name="customerAddress" ref="address1" />
+         </bean>
+
+        <bean class="assignments.assignment1.classes.Address" name="address2">
+            <constructor-arg value="Yadav Street, Shyam-lal Colony" />
+            <constructor-arg value="Allahabad" />
+            <constructor-arg value="Uttar Pradesh" />
+            <constructor-arg value="182330" />
+            <constructor-arg value="India" />
+        </bean>
+
+        <bean class="assignments.assignment1.classes.Customer" name="customer2">
+            <constructor-arg value="11704058" />
+            <constructor-arg value="Narendra Modi" />
+            <constructor-arg value="8238928892" />
+            <constructor-arg ref="address2" />
+        </bean>
+
+</beans>

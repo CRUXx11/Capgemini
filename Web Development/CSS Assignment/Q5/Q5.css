@@ -1,0 +1,11 @@
+body{
+    background-color: blanchedalmond;
+}
+th,td{
+    border-width: thin;
+    border-style: solid;
+    background-color: blanchedalmond;
+}
+table{
+    background-color: black;
+}

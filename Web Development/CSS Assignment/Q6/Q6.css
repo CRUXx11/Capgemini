@@ -1,0 +1,22 @@
+td{
+    border-width: thin;
+    border-style: solid;
+    border-color: green;
+    background-color: rgb(230, 255, 190);
+}
+th{
+    border-width: thin;
+    border-style: solid;
+    background-color: green;
+    border-color:green;
+    color: white;
+}
+table{
+    background-color:white;
+    border-color: green;
+    border-style: solid;
+    
+}
+body{
+    background-color: rgb(230, 255, 190);
+}
