@@ -8,13 +8,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatIconModule } from '@angular/material/icon';
 import { SigninService } from './signin/signin.service';
 import { SignupService } from './signup/signup.service';
-//import { ContactusComponent } from './contactus/contactus.component';
+
 // import { TokenInterceptorService } from './token-interceptor.service';
 @NgModule({
   declarations: [
     AppComponent,
     routingcomponents,
-    //ContactusComponent,
   ],
   imports: [
     BrowserModule,

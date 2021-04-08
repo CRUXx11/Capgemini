@@ -15,12 +15,12 @@ export class SigninService {
          
   }
   
-  public welcome(token) {
-    let tokenstr = "Bearer " + token;
-    const headers = new HttpHeaders().set("Authorization", tokenstr)
-    console.log("welcome "+tokenstr)
-    return this.http.get('http://localhost:9090/get',{headers,responseType:'text' as 'json'})
-  }
+  // public welcome(token) {
+  //   let tokenstr = "Bearer " + token;
+  //   const headers = new HttpHeaders().set("Authorization", tokenstr)
+  //   console.log("welcome "+tokenstr)
+  //   return this.http.get('http://localhost:9090/get',{headers,responseType:'text' as 'json'})
+  // }
 
   
   errorHandler(error: HttpErrorResponse) {

@@ -9,8 +9,8 @@
         <module name="booknow" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="booknow" target="11" />
+    <bytecodeTargetLevel target="15">
+      <module name="booknow" target="14" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

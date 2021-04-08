@@ -58,10 +58,6 @@ public class CustomerController {
         return p.toString();
     }
 
-    @RequestMapping("/")
-    public String welcome(){
-        return "Sign in Successful";
-    }
 
     @RequestMapping("/getAll")
     public List<Customer> getAll(){
