@@ -13,13 +13,16 @@ export class SigninComponent implements OnInit {
   submitted = false;
   jwttoken: any;
   resp: any;
+  signupform = true;
   usermodel: Signinuser = new Signinuser("","");
   constructor(private signinservice:SigninService,private router:Router) { }
 
   ngOnInit(): void {
   }
 
-  
+  toggleform(){
+    this.signupform = !this.signupform
+  }
 
   public onsubmit() {
     this.submitted = true;
@@ -28,17 +31,18 @@ export class SigninComponent implements OnInit {
         this.jwttoken = data
         localStorage.setItem('token', this.jwttoken)
         console.log(this.jwttoken)
+        this.getuserdetails(this.jwttoken)
       }
     );
   }
-  // public getuserdetails(token) {
-  //   let resp= this.signinservice.welcome(token).subscribe(
-  //     data => {
-  //       this.resp = data
-  //       console.log(this.resp)
-  //     });
+  public getuserdetails(token) {
+    let resp= this.signinservice.welcome(token).subscribe(
+      data => {
+        this.resp = data
+        console.log(this.resp)
+      });
     
-  // }
+  }
 
   
 }
