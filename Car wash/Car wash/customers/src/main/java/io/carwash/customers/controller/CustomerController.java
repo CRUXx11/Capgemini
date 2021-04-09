@@ -18,6 +18,7 @@ import java.util.List;
 
 @RestController
 @CrossOrigin(origins="*")
+@RequestMapping("/customers")
 public class CustomerController {
 
     @Autowired
@@ -38,7 +39,7 @@ public class CustomerController {
         return p.toString();
     }
 
-    @RequestMapping("/authenticate")
+    @PostMapping("/authenticate")
     private ResponseEntity<?> authenticateClient(@RequestBody AuthenticationRequest authenticationRequest) throws Exception{
         String email=authenticationRequest.getEmail();
 

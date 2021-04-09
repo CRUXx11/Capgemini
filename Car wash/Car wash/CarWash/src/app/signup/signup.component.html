@@ -77,10 +77,19 @@
         <input
           type="email"
           class="form-control"
+          required
+          #email="ngModel"
+          [class.is-invalid]="email.invalid && email.touched"
           name="email"
           placeholder="Email"
           [(ngModel)]="usermodel.email"
+          email
         />
+        <small
+          [class.d-none]="email.valid || email.untouched"
+          class="text-danger"
+          >Valid Email required</small
+        >
       </div>
       <div class="form-group">
         <span class="material-icons">phone</span>

@@ -8,6 +8,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface PaymentRepo extends MongoRepository<Payment, Integer>{
-
+    Payment findByOrderId(int orderId);
 }
 

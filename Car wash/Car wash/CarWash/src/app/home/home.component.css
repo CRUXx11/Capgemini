@@ -45,7 +45,7 @@ a:focus {
 .btn.btn-custom:hover {
     color: black;
     background: black;
-    box-shadow: inset 200px 0 0 0 orange;
+    box-shadow: inset 200px 0 0 0 yellow;
 }
 /*
 .btn:focus,

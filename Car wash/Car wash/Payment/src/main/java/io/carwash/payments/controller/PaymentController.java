@@ -26,5 +26,8 @@ public class PaymentController {
         return paymentService.doPayment(payment);
     }
 
-
+    @GetMapping("/{orderId}")
+    public Payment findPaymentByOrderId(@PathVariable int orderId){
+        return paymentService.findPaymentByOrderId(orderId);
+    }
 }

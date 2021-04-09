@@ -27,7 +27,7 @@ public class OrderService {
         payment.setAmount(order.getPrice());
 
         //rest call
-        Payment paymentResponse=restTemplate.postForObject("http://localhost:9094/payment/dopayment",payment,Payment.class);
+        Payment paymentResponse=restTemplate.postForObject("http://PAYMENT-SERVICE/payment/dopayment",payment,Payment.class);
         response=paymentResponse.getPaymentStatus().equals("Success")?"Payment Successful and booking confirmed":"Payment failed order added to cart";
 
 

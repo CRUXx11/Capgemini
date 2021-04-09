@@ -42,10 +42,17 @@
           class="form-control"
           required
           #email="ngModel"
+          [class.is-invalid]="email.invalid && email.touched"
           name="email"
           placeholder="Email"
           [(ngModel)]="usermodel.email"
+          email
         />
+        <small
+          [class.d-none]="email.valid || email.untouched"
+          class="text-danger"
+          >Email required</small
+        >
       </div>
      
       <div class="form-group">
