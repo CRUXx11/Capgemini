@@ -1,15 +1,6 @@
 server:
   port: 9089
 
-eureka:
-  client:
-    register-with-eureka: true
-    fetch-registry: true
-    service-url:
-      defaultZone: http://localhost:8761/eureka/
-  instance:
-    hostname: localhost
-
 spring:
   application:
     name: GATEWAY-SERVICE
@@ -20,11 +11,40 @@ spring:
           uri: lb://ORDER-SERVICE
           predicates:
             - Path= /order/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: order-service
+                fallbackuri: forward:/orderFallback
         - id: payments-service
           uri: lb://PAYMENT-SERVICE
           predicates:
             - Path=/payment/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: payments-service
+                fallbackuri: forward:/paymentFallback
         - id: customers-service
           uri: lb://CUSTOMER-SERVICE
           predicates:
             - Path= /customers/**
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: customers-service
+                fallbackuri: forward:/customerFallback
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream
+
+hystrix:
+  command:
+    fallbackcmd:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 10000

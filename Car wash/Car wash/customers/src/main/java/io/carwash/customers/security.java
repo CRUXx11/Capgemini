@@ -52,8 +52,13 @@ public class security extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.cors().disable();
         http.csrf().disable()
-                .authorizeRequests().antMatchers("/customers/authenticate").permitAll().antMatchers("/create").permitAll().antMatchers(HttpMethod.OPTIONS,"/**").permitAll()
-                .anyRequest().authenticated().and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+                .authorizeRequests()
+                .antMatchers("/customers/authenticate").permitAll()
+                .antMatchers("/create").permitAll()
+                .antMatchers(HttpMethod.OPTIONS,"/**").permitAll()
+                .anyRequest().authenticated().and()
+                .sessionManagement()
+                .sessionCreationPolicy(SessionCreationPolicy.STATELESS);
         ;http.addFilterBefore(jwtFilterReq, UsernamePasswordAuthenticationFilter.class);
     }
 
@@ -61,5 +66,7 @@ public class security extends WebSecurityConfigurerAdapter {
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.userDetailsService(userDetailsService);
     }
+    
+
 
 }

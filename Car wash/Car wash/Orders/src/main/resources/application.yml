@@ -1,9 +1,13 @@
 server:
-  port: 9094
+  port: 9093
 spring:
   application:
-    name: PAYMENT-SERVICE
+    name: ORDER-SERVICE
   data:
     mongodb:
       uri: mongodb+srv://CRUXx:Crux%4011@cluster0.zuegb.mongodb.net/Orders?retryWrites=true&w=majority
-
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

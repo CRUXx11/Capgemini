@@ -1,0 +1,9 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://CRUXx:Crux%4011@cluster0.zuegb.mongodb.net/Users?retryWrites=true&w=majority
+  application:
+    name: CUSTOMER-SERVICE
+
+server:
+  port: 9092

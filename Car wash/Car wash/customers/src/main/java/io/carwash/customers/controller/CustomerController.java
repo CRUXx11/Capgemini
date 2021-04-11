@@ -17,7 +17,7 @@ import java.util.List;
 
 
 @RestController
-@CrossOrigin(origins="*")
+@CrossOrigin(origins="*",allowedHeaders = "Content-Type")
 @RequestMapping("/customers")
 public class CustomerController {
 
@@ -58,7 +58,11 @@ public class CustomerController {
         Customer p=customerService.getByEmail(authenticationRequest.getEmail());
         return p.toString();
     }
-
+    @RequestMapping("/getlogin")
+    public String getCustomerlogin(@RequestBody AuthenticationRequest authenticationRequest){
+        Customer p=customerService.getByEmail(authenticationRequest.getEmail());
+        return p.toString();
+    }
 
     @RequestMapping("/getAll")
     public List<Customer> getAll(){
