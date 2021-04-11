@@ -1,11 +1,22 @@
 import { Injectable } from '@angular/core';
 import { catchError } from 'rxjs/operators';
 import { throwError } from 'rxjs';
-import {HttpClient, HttpErrorResponse} from '@angular/common/http';
+import {HttpClient, HttpErrorResponse, HttpHeaders} from '@angular/common/http';
 import {Customer} from './customer';
+
+export const HTTP_OPTIONS={
+  headers:new HttpHeaders({
+    'Content-Type':'application/json',
+    'Access-Control-Allow-Origin':"*",
+    'Access-Control-Allow-Headers':"*"
+  })
+}
+
 @Injectable({
   providedIn: 'root'
 })
+
+
 export class SignupService {
   
   constructor(private http:HttpClient) { }

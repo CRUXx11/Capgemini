@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'CarWash';
+  onActivate(event) {
+    window.scroll(0,0);
+    //or document.body.scrollTop = 0;
+    //or document.querySelector('body').scrollTo(0,0) 
+}
+scrollToTop() {
+  window.scrollTo({top: 0, behavior: 'smooth'});
+  
+  }
 }

@@ -7,3 +7,6 @@ spring:
 
 server:
   port: 9092
+logging:
+  file:
+    path: C:/Users/Shriganesh/Desktop/logs/customer.log
