@@ -35,6 +35,7 @@ export class SigninComponent implements OnInit {
       }
     );
   }
+
   // public getuserdetails(token) {
   //   let resp= this.signinservice.welcome(token).subscribe(
   //     data => {

@@ -10,6 +10,7 @@ spring:
         cors-configurations:
           '[/**]':
             allowedOrigins: "*"
+            allowedMethods: "*"
       routes:
         - id: order-service
           uri: lb://ORDER-SERVICE

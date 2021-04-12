@@ -116,7 +116,8 @@
         </div>
       </div>
       <br />
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <button
         [disabled]="userform.form.invalid"
         type="submit"
         class="btn btn-dark"
@@ -126,7 +127,6 @@
       <a routerLink="/signin" onclick="toggleform">
         <h1 class="alreadyuser">Already a user?Signin</h1>
       </a>
-     
     </form>
     <div *ngIf="submitted"><h1> Success</h1></div>
   </div>

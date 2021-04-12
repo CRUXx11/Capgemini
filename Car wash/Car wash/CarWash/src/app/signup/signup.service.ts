@@ -23,9 +23,9 @@ export class SignupService {
 
   public enroll(customer) {
     return this.http.post('http://localhost:9089/customers/create',customer,{responseType:'text' as 'json'})
-         .pipe(catchError(this.errorHandler))
-         
+         .pipe(catchError(this.errorHandler))    
   }
+
   
   errorHandler(error: HttpErrorResponse) {
     return throwError(error);
