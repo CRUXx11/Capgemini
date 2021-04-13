@@ -15,6 +15,7 @@ export class SignupComponent implements OnInit {
   submitted = false;
   errmsg = '';
   signupsuccess = "";
+  workingStatus:any;
   
   constructor(private signupservice:SignupService,private router:Router) { }
 
@@ -23,12 +24,27 @@ export class SignupComponent implements OnInit {
   
   public onsubmit() {
     this.submitted = true;
-    this.signupservice.enroll(this.usermodel).subscribe(
-      data => console.log('Success', data)
-    )
+    this.serviceupcheck();
     setTimeout(() => {
       this.router.navigate(["home"])
     }, 2000);
+  }
+  public serviceupcheck(){
+    this.signupservice.test().subscribe(
+      data=>{
+        this.workingStatus=data;
+        console.log(this.workingStatus);
+        this.gett();
+      }
+    )
+  }
+  
+  public gett(){
+    if(this.workingStatus=="working"){
+      this.signupservice.enroll(this.usermodel).subscribe(
+        data => console.log('Success', data)
+      )
+    }
   }
   toggleform(){
     this.signupform = !this.signupform

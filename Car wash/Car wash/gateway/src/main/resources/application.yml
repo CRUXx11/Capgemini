@@ -9,8 +9,10 @@ spring:
       globalcors:
         cors-configurations:
           '[/**]':
-            allowedOrigins: "*"
-            allowedMethods: "*"
+            allowedOrigins: "http://localhost:4200"
+            allowedMethods:
+              - GET
+              - POST
       routes:
         - id: order-service
           uri: lb://ORDER-SERVICE
@@ -40,11 +42,6 @@ spring:
                 name: customers-service
                 fallbackuri: forward:/customerFallback
 
-management:
-  endpoints:
-    web:
-      exposure:
-        include: hystrix.stream
 
 hystrix:
   command:
@@ -53,3 +50,5 @@ hystrix:
         isolation:
           thread:
             timeoutInMilliseconds: 10000
+
+        

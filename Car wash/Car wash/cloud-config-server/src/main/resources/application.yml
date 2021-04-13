@@ -9,11 +9,7 @@ spring:
           username: CRUXx11
           password: Crux%4011
           default-label: main
-    gateway:
-      globalcors:
-        cors-configurations:
-          '[/**]':
-            allowedOrigins: "*"
+
 server:
   port: 9088
 

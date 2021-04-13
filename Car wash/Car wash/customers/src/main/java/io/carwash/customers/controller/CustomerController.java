@@ -17,7 +17,7 @@ import java.util.List;
 
 
 @RestController
-//@CrossOrigin(origins="*",allowedHeaders = "Content-Type")
+@CrossOrigin(origins="*",allowedHeaders = "Content-Type")
 @RequestMapping("/customers")
 public class CustomerController {
 
@@ -53,14 +53,14 @@ public class CustomerController {
         String generatedToken =jwtUtil.generateToken(loadedUser);
         return ResponseEntity.ok(new AuthenticationResponse(generatedToken));
     }
+    @GetMapping("test")
+    public String test(){
+        return "working";
+    }
     @RequestMapping("/get")
     public String getCustomer(@RequestBody AuthenticationRequest authenticationRequest){
         Customer p=customerService.getByEmail(authenticationRequest.getEmail());
         return p.toString();
-    }
-    @GetMapping("/test")
-    public String test(){
-        return "Tested";
     }
     @RequestMapping("/getlogin")
     public String getCustomerlogin(@RequestBody AuthenticationRequest authenticationRequest){

@@ -1,7 +1,7 @@
-package io.carwash.gateway;
+package io.carwash.admin;
 
-import io.carwash.customers.service.CustomerService;
-import io.carwash.customers.service.JwtFilterReq;
+import io.carwash.admin.service.AdminService;
+import io.carwash.admin.service.JwtFilterReq;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -16,18 +16,15 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
-import org.springframework.web.cors.CorsConfiguration;
-import org.springframework.web.cors.CorsConfigurationSource;
-import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
-
-import java.util.Arrays;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration
 @EnableWebSecurity
 public class security extends WebSecurityConfigurerAdapter {
 
     @Autowired
-    private CustomerService userDetailsService;
+    private AdminService userDetailsService;
 
     @Autowired
     private JwtFilterReq jwtFilterReq;
@@ -50,37 +47,26 @@ public class security extends WebSecurityConfigurerAdapter {
     public AuthenticationManager authenticationManagerBean() throws Exception{
         return super.authenticationManagerBean();
     }
-    @Bean
-    CorsConfigurationSource corsConfigurationSource() {
-        CorsConfiguration configuration = new CorsConfiguration();
-        configuration.setAllowedOrigins(Arrays.asList("*"));
-        configuration.setAllowedMethods(Arrays.asList("*"));
-        configuration.setAllowedHeaders(Arrays.asList("*"));
-        configuration.setAllowCredentials(true);
-        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
-        source.registerCorsConfiguration("/**", configuration);
-        return source;
-    }
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.cors().disable();
         http.csrf().disable()
                 .authorizeRequests()
-                .antMatchers("/customers/authenticate","/customers/test").permitAll()
-                .antMatchers("/customers/create").permitAll()
+                .antMatchers("/admin/authenticate").permitAll()
+                .antMatchers("/admin/test").permitAll()
+                .antMatchers("/admin/create").permitAll()
                 .antMatchers(HttpMethod.OPTIONS,"/**").permitAll()
                 .anyRequest().authenticated().and()
                 .sessionManagement()
-                .sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
-            .addFilterBefore(jwtFilterReq, UsernamePasswordAuthenticationFilter.class);
+                .sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+        ;http.addFilterBefore(jwtFilterReq, UsernamePasswordAuthenticationFilter.class);
     }
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.userDetailsService(userDetailsService);
     }
-    
+
 
 
 }

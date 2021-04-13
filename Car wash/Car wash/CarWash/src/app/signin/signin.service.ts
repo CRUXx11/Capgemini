@@ -6,13 +6,14 @@ import {HttpClient, HttpErrorResponse, HttpHeaders} from '@angular/common/http';
   providedIn: 'root'
 })
 export class SigninService {
-
    constructor(private http:HttpClient) { }
 
   public generatetoken(user) {
-    return this.http.post('http://localhost:9089/customers/authenticate', user, { responseType: 'text' as 'json' })
-      .pipe(catchError(this.errorHandler));
-         
+    return this.http.post('http://localhost:9092/customers/authenticate', user, { responseType: 'text' as 'json' })
+      .pipe(catchError(this.errorHandler));     
+  }
+  public test(){
+    return this.http.get('http://localhost:9089/customers/test',{ responseType: 'text' as 'json' })
   }
   
   // public welcome(token) {

@@ -22,8 +22,11 @@ export class SignupService {
   constructor(private http:HttpClient) { }
 
   public enroll(customer) {
-    return this.http.post('http://localhost:9089/customers/create',customer,{responseType:'text' as 'json'})
+    return this.http.post('http://localhost:9092/customers/create',customer,{responseType:'text' as 'json'})
          .pipe(catchError(this.errorHandler))    
+  }
+  public test(){
+    return this.http.get('http://localhost:9089/customers/test',{ responseType: 'text' as 'json' })
   }
 
   

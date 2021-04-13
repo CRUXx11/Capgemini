@@ -1,10 +1,10 @@
-package io.carwash.hystrixdashboard;
+package io.carwash.admin;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class HystrixDashboardApplicationTests {
+class AdminApplicationTests {
 
     @Test
     void contextLoads() {
