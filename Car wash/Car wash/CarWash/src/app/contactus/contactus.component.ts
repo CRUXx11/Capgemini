@@ -12,5 +12,13 @@ export class ContactusComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  public checklogin(){
+    if(localStorage.getItem('email')===null){
+      this.router.navigate(["signup"])
+    }
+    else{
+      this.router.navigate(["profile"]);
+    }
+  }
 
 }

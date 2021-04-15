@@ -18,6 +18,8 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration
 @EnableWebSecurity
@@ -53,15 +55,27 @@ public class security extends WebSecurityConfigurerAdapter {
         http.cors().disable();
         http.csrf().disable()
                 .authorizeRequests()
+                .antMatchers(HttpMethod.OPTIONS,"/**").permitAll()
                 .antMatchers("/customers/authenticate").permitAll()
                 .antMatchers("/customers/test").permitAll()
                 .antMatchers("/customers/create").permitAll()
-                .antMatchers(HttpMethod.OPTIONS,"/**").permitAll()
+                .antMatchers("/customers/get").permitAll()
                 .anyRequest().authenticated().and()
                 .sessionManagement()
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS);
         ;http.addFilterBefore(jwtFilterReq, UsernamePasswordAuthenticationFilter.class);
     }
+
+//	@Bean
+//	public WebMvcConfigurer corsConfigurer(){
+//		return new WebMvcConfigurer() {
+//			@Override
+//			public void addCorsMappings(CorsRegistry registry) {
+//				registry.addMapping("/*").allowedHeaders("*").allowedOrigins("*").allowedMethods("*");
+//
+//			}
+//		};
+//	}
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {

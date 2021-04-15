@@ -5,6 +5,8 @@ import { HomeComponent } from './home/home.component';
 import { ServicespageComponent } from './servicespage/servicespage.component';
 import { SigninComponent } from './signin/signin.component';
 import { SignupComponent } from './signup/signup.component';
+import { ProfileComponent } from './profile/profile.component';
+import { PriceComponent } from './price/price.component';
 
 const routes: Routes = [
   {path:"",redirectTo:"/home",pathMatch:'full'},
@@ -12,7 +14,9 @@ const routes: Routes = [
   { path: "signup", component: SignupComponent },
   { path: "signin", component: SigninComponent },
   {path:"services",component:ServicespageComponent},
-  {path:"contactus",component:ContactusComponent}
+  {path:"contactus",component:ContactusComponent},
+  {path:"profile",component:ProfileComponent},
+  {path:"price",component:PriceComponent}
 ];
 
 @NgModule({
@@ -20,4 +24,5 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingcomponents =[HomeComponent,SignupComponent,SigninComponent,ContactusComponent, ServicespageComponent]
+export const routingcomponents =[HomeComponent,SignupComponent,SigninComponent,
+                                 ContactusComponent, ServicespageComponent,ProfileComponent,PriceComponent]

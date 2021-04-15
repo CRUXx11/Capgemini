@@ -6,7 +6,9 @@ h5,
 h6 {
     color: black;
 }
-
+.body{
+    background-color: wheat;
+}
 /* a {
     color: black;
     transition: .3s;

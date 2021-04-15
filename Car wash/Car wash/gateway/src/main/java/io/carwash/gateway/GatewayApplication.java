@@ -17,13 +17,13 @@ public class GatewayApplication {
 		SpringApplication.run(GatewayApplication.class, args);
 	}
 
-	@Bean
-	public WebMvcConfigurer corsConfigurer() {
-		return new WebMvcConfigurer() {
-			public void addCorsMappings(CorsRegistry registry) {
-				registry.addMapping("/customers/**").allowedOrigins("http://localhost:4200");
-			}
-		};
-	}
+//	@Bean
+//	public WebMvcConfigurer corsConfigurer() {
+//		return new WebMvcConfigurer() {
+//			public void addCorsMappings(CorsRegistry registry) {
+//				registry.addMapping("/customers/**").allowedOrigins("http://localhost:4200");
+//			}
+//		};
+//	}
 
 }

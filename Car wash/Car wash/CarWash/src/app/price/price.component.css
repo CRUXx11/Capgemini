@@ -1,10 +1,3 @@
-/* body {
-    color: black;
-    font-weight: 400;
-    background: gray;
-    font-family: 'Barlow', sans-serif;
-} */
-
 h1,
 h2, 
 h3, 
@@ -190,199 +183,129 @@ a:focus {
     border-radius: 25%;
     color: yellow;
 }
-.carousel-item img{
-    filter: contrast(90%);
-    filter: brightness(50%)
-}
-.carousel-caption h3{
-    position: relative;
-    color: red;
-    font-weight: 600;
-    font-size: 180%;
-    letter-spacing: 4px;
-    margin-top: -60%;
- 
-    }
-.carousel-caption h1{
-width: 130%;
-height: 70px;
-color: white;
-font-weight: 600;
-font-size: 510%;
-letter-spacing: 4px;
-margin-left: -15%;
-}
-.carousel-caption h2{
-    width: 130%;
-    height: 70px;
-    color: white;
-    font-weight: 600;
-    font-size: 110%;
-    letter-spacing: 4px;
-    margin-left: -15%;
-    }
-.carousel-control-prev-icon{
-    background-color: gray;
-    width: 30%;
-    height:8%;
-    border-radius: 50%;
-}
-.carousel-control-prev-icon:hover{
-background-color: limegreen;
-}
-
-.carousel-control-next-icon{
-    background-color: gray;
-    width: 30%;
-    height:8%;
-    border-radius: 50%;
-}
-.carousel-control-next-icon:hover{
-    background-color: limegreen;
-    }
-
 
 /*******************************/
-/********** Facts CSS **********/
+/********* Pricing CSS *********/
 /*******************************/
-.facts {
-    position: relative;
-    width: 100%;
-    min-height: 400px;
-    margin: 45px 0;
-    display: flex;
-    align-items: center;
-    background: black;
-}
-  
-.facts .facts-item {
-    display: flex;
-    flex-direction: row;
-    margin: 25px 0;
-}
-
-.facts .facts-item i {
-    margin-top: 15px;
-    font-size: 45px;
-    color: #E81C2E;
-}
-
-.facts .facts-text {
-    padding-left: 20px;
-}
-
-.facts .facts-text h3 {
-    position: relative;
-    display: inline-block;
-    color: #ffffff;
-    font-size: 60px;
-    font-weight: 700;
-}
-
-.facts .facts-text h3::after {
-    position: absolute;
-    content: "\f067";
-    top: 0px;
-    right: -25px;
-    color: #ffffff;
-    font-size: 25px;
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-}
-
-.facts .facts-text p {
-    color: #ffffff;
-    font-size: 18px;
-    font-weight: 500;
-    margin: 0;
-}
-/*******************************/
-/********** Teams CSS **********/
-/*******************************/
-.team {
+.price {
     position: relative;
     width: 100%;
     padding: 45px 0 15px 0;
 }
+.price .section-header p{
+ font-size: 130%;
+ font-weight: 300;
+ color: red;
+ text-decoration: underline;
+}
+.price .section-header h2{
+    font-size: 220%;
+    font-weight: 600;
+    color: black;
+   
+   }
 
-.team .team-item {
+.price .row {
+    padding: 0 15px;
+}
+
+.price .col-md-4 {
+    padding: 0;
+}
+
+.price .price-item {
     position: relative;
     margin-bottom: 30px;
-}
-
-.team .team-img {
-    position: relative;
-    border-radius: 5px 5px 0 0;
-    overflow: hidden;
-}
-
-.team .team-img img {
-    width: 100%;
-    transition: .3s;
-    filter: brightness(70%);
-}
-
-.team .team-item:hover img {
-    transform: scale(1.1);
-    filter: brightness(85%);
-}
-
-.team .team-text {
-    position: relative;
-    width: 100%;
-    padding: 35px 30px 30px 30px;
+    background: #ffffff;
+    border-radius: 5px;
     text-align: center;
-    background: black;
-    border-radius: 0 0 5px 5px;
-    transition: .5s;
 }
 
-.team .team-item:hover .team-text {
-    background: #E81C2E;
+.price .featured-item {
+    box-shadow: 0 0 30px rgba(0, 0, 0, .2);
+    z-index: 1;
 }
 
-.team .team-text h2 {
-    color: #ffffff;
+.price .price-header {
+    padding: 45px 0 30px 0;
+}
+
+.price .price-header h3 {
     font-size: 20px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    margin-bottom: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
-.team .team-text p {
+.price .price-header h2 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    font-size: 60px;
+    font-weight: 700;
+    letter-spacing: 5px;
+}
+
+.price .price-header h2 span {
+    font-size: 25px;
+    line-height: 55px;
+}
+
+.price .price-item.featured-item h2,
+.price .price-item.featured-item h3 {
+    color: blue;
+}
+
+.price .price-body {
+    padding: 0 0 20px 0;
+}
+
+.price .price-body ul {
     margin: 0;
-    color: #ffffff;
+    padding: 0;
+    list-style: none;
 }
 
-.team .team-social {
-    position: absolute;
-    width: 100%;
-    height: 40px;
-    top: -20px;
-    left: 0;
-    text-align: center;
-    font-size: 0;
+.price .price-body ul li {
+    padding: 0 0 15px 0;
 }
 
-.team .team-social a {
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    margin: 0 3px;
-    padding: 7px 0;
-    text-align: center;
-    font-size: 16px;
-    color: #ffffff;
+.price .price-body ul li i {
+    margin-right: 10px;
+}
+
+.price .price-body ul li i.fa-check-circle {
+    color: #39B972;
+}
+
+.price .price-body ul li i.fa-times-circle {
+    color: #cccccc;
+}
+
+.price .price-item .price-footer {
+    padding-bottom: 45px;
+}
+
+.price .price-item .price-footer .btn.btn-custom {
+    color: white;
     background: black;
-    border-radius: 40px;
-    transition: .5s;
+    box-shadow: inset 0 0 0 0 blue;
 }
 
-.team .team-item:hover .team-social a {
-    background: #E81C2E;
+.price .price-item .price-footer .btn.btn-custom:hover {
+    color: #ffffff;
+    background: blue;
+    box-shadow: inset 200px 0 0 0 blue;
 }
 
-.team .team-social a:hover {
-    color: #202C45;
+.price .price-item.featured-item .price-footer .btn.btn-custom {
+    color: #ffffff;
+    background: blue;
+    box-shadow: inset 0 0 0 0 black;
 }
 
+.price .price-item.featured-item .price-footer .btn.btn-custom:hover {
+    color: white;
+    background: black;
+    box-shadow: inset 200px 0 0 0 black;
+}

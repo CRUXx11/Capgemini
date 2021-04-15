@@ -13,10 +13,14 @@
     -moz-transition: ease-in-out 0.5s;
 }
 
+
 .btn.btn-custom:hover {
     color: black;
     background: black;
     box-shadow: inset 200px 0 0 0 yellow;
+}
+.body{
+    background-color: white;
 }
 /*
 .btn:focus,
@@ -84,10 +88,11 @@
     margin-top: 10%;
 }
 .signup h1{
-    margin-left: 160px;
+    margin-left: 120px;
     font-weight: 1000;
     color: green;
     text-decoration: underline solid green;
+    cursor: pointer;
 }
 .signup .alreadyuser{
     margin-top: -35px;
@@ -97,7 +102,7 @@
     padding-top:30px;
     height: 500px;
     width: 45%;
-    border:2px solid white;
+    border:2px solid wheat;
     margin-left: 40%;
     margin-top: -30%;
 }

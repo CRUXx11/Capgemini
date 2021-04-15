@@ -1,4 +1,4 @@
-<div class="nav-bar">
+<div class="body"><div class="nav-bar">
   <div class="container">
       <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
           <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
@@ -11,7 +11,7 @@
                 <a routerLink="/price" class="nav-item nav-link px-4">Price</a>
                 <a routerLink="/about" class="nav-item nav-link px-4">About Us</a>
                 <a routerLink="/contactus" class="nav-item nav-link px-4">Contact</a>
-                <a routerLink="/signup" class="nav-item nav-link px-4 active">My Profile</a>
+                <a routerLink="/profile" (click)="checklogin()" class="nav-item nav-link px-4 active">My Profile</a>
               </div>
               <div class="ml-auto">
                   
@@ -124,7 +124,7 @@
       >
         Submit
       </button>
-      <a routerLink="/signin" onclick="toggleform">
+      <a (click)="toggleform()">
         <h1 class="alreadyuser">Already a user?Signin</h1>
       </a>
     </form>
@@ -132,3 +132,4 @@
   </div>
 </div>
 
+</div>

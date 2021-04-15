@@ -21,7 +21,14 @@ export class SignupComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  
+  public checklogin(){
+    if(localStorage.getItem('email')===null){
+      this.router.navigate(["signup"])
+    }
+    else{
+      this.router.navigate(["profile"]);
+    }
+  }
   public onsubmit() {
     this.submitted = true;
     this.serviceupcheck();
@@ -47,6 +54,13 @@ export class SignupComponent implements OnInit {
     }
   }
   toggleform(){
+    if(localStorage.getItem('email')!==null){
+      window.alert("Already Signed in ")
+      this.router.navigate(["home"])
+    }
+    else{
+      this.router.navigate(["signin"])
+    }
     this.signupform = !this.signupform
   }
 }

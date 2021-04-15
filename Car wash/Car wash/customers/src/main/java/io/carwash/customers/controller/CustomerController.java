@@ -17,7 +17,7 @@ import java.util.List;
 
 
 @RestController
-@CrossOrigin(origins="*",allowedHeaders = "Content-Type")
+@CrossOrigin(origins="*",allowedHeaders = "*")
 @RequestMapping("/customers")
 public class CustomerController {
 
@@ -33,12 +33,14 @@ public class CustomerController {
     @Autowired
     private AuthenticationManager authenticationManager;
 
+    @CrossOrigin(origins="*",allowedHeaders = "*")
     @RequestMapping("/create")
     public String create(@RequestBody Customer customer) {
         Customer p = customerService.create(customer);
         return p.toString();
     }
 
+    @CrossOrigin(origins="*",allowedHeaders = "*")
     @PostMapping("/authenticate")
     private ResponseEntity<?> authenticateClient(@RequestBody AuthenticationRequest authenticationRequest) throws Exception{
         String email=authenticationRequest.getEmail();
@@ -53,27 +55,32 @@ public class CustomerController {
         String generatedToken =jwtUtil.generateToken(loadedUser);
         return ResponseEntity.ok(new AuthenticationResponse(generatedToken));
     }
-    @GetMapping("test")
+    @CrossOrigin(origins="*",allowedHeaders = "*")
+    @GetMapping("/test")
     public String test(){
         return "working";
     }
+
+    @CrossOrigin(origins="*",allowedHeaders = "*")
     @RequestMapping("/get")
-    public String getCustomer(@RequestBody AuthenticationRequest authenticationRequest){
+    public Customer getCustomer(@RequestBody AuthenticationRequest authenticationRequest){
         Customer p=customerService.getByEmail(authenticationRequest.getEmail());
-        return p.toString();
+        return p;
     }
+    @CrossOrigin(origins="*",allowedHeaders = "*")
     @RequestMapping("/getlogin")
-    public String getCustomerlogin(@RequestBody AuthenticationRequest authenticationRequest){
-        Customer p=customerService.getByEmail(authenticationRequest.getEmail());
+    public String getCustomer(@RequestParam String email) {
+        Customer p = customerService.getByEmail(email);
         return p.toString();
     }
 
+    @CrossOrigin(origins="*",allowedHeaders = "*")
     @RequestMapping("/getAll")
     public List<Customer> getAll(){
         return customerService.getAll();
     }
 
-
+    @CrossOrigin(origins="*",allowedHeaders = "*")
     @RequestMapping("/update")
     public String update(@RequestParam String Name, @RequestParam String password,@RequestParam String email,@RequestParam String contact) {
         Customer p = customerService.update(Name, password,email,contact);

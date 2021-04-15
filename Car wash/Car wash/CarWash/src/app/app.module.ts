@@ -9,6 +9,8 @@ import {MatIconModule } from '@angular/material/icon';
 import { SigninService } from './signin/signin.service';
 import { SignupService } from './signup/signup.service';
 
+
+
 // import { TokenInterceptorService } from './token-interceptor.service';
 @NgModule({
   declarations: [
@@ -22,7 +24,8 @@ import { SignupService } from './signup/signup.service';
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    MatIconModule
+    MatIconModule,
+    
   ],
   providers: [
     // {

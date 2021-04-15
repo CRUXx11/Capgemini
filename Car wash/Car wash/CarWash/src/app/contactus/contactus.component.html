@@ -1,4 +1,4 @@
-<div class="nav-bar">
+<div class="nav-bar sticky-top">
     <div class="container">
         <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
@@ -6,12 +6,12 @@
             </button>
             <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                 <div class="navbar-nav mr-auto ">
-                    <a routerLink="home" class="nav-item nav-link px-4 ">Home</a>
+                    <a routerLink="/home" class="nav-item nav-link px-4 ">Home</a>
                     <a routerLink="/services" class="nav-item px-4 nav-link">Services</a>
                     <a routerLink="/price" class="nav-item nav-link px-4">Price</a>
                     <a routerLink="/about" class="nav-item nav-link px-4 ">About Us</a>
                     <a routerLink="/contactus" class="nav-item nav-link px-4 active">Contact</a>
-                    <a routerLink="/signup" class="nav-item nav-link px-4">My Profile</a>
+                    <a routerLink="/profile"  (click)="checklogin()" class="nav-item nav-link px-4">My Profile</a>
                 </div>
                 <div class="ml-auto">    
                     <a class="btn btn-custom" href="#">Book now</a>
