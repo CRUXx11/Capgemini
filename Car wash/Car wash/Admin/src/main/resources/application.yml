@@ -1,0 +1,12 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://CRUXx:Crux%4011@cluster0.zuegb.mongodb.net/Users?retryWrites=true&w=majority
+  application:
+    name: ADMIN-SERVICE
+
+server:
+  port: 9091
+logging:
+  file:
+    path: C:/Users/Shriganesh/Desktop/logs/admin.log

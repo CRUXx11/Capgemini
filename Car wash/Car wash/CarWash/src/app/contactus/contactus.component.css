@@ -187,6 +187,8 @@ a:focus {
 .nav-bar {
     position: sticky;
     background: black;
+    border-bottom: 3px solid orange;
+    border-top: 3px solid orange;
 }
 .nav-bar.nav-sticky {
     position: sticky;

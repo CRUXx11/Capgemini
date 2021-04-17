@@ -142,6 +142,8 @@ a:focus {
 .nav-bar {
     position: sticky;
     background: black;
+    border-bottom: 3px solid orange;
+    border-top: 3px solid orange;
 }
 .nav-bar.nav-sticky {
     position: sticky;
@@ -155,6 +157,7 @@ a:focus {
     padding: 20px 0;
     background: black !important;
     transition: .3s;
+   
 }
 .nav-bar.nav-sticky .navbar {
     padding: 5px 0;
@@ -383,6 +386,6 @@ background-color: limegreen;
 }
 
 .team .team-social a:hover {
-    color: #202C45;
+    color: black;
 }
 

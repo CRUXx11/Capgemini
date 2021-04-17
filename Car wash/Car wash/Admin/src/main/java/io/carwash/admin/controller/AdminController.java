@@ -1,23 +1,18 @@
 package io.carwash.admin.controller;
 
-import io.carwash.admin.model.AuthenticationRequest;
-import io.carwash.admin.model.AuthenticationResponse;
 import io.carwash.admin.model.Admin;
+import io.carwash.admin.model.AuthenticationRequest;
 import io.carwash.admin.service.AdminService;
-import io.carwash.admin.util.JwtUtil;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.client.RestTemplate;
+import org.springframework.web.servlet.view.RedirectView;
 
 import java.util.List;
 
 
 @RestController
-@CrossOrigin(origins="*")
+@CrossOrigin(origins="*",allowedHeaders = "*")
 @RequestMapping("/admin")
 public class AdminController {
 
@@ -25,69 +20,55 @@ public class AdminController {
     private AdminService adminService;
 
     @Autowired
-    private JwtUtil jwtUtil;
-
-    @Autowired
-    private RestTemplate restTemplate;
-
-    @Autowired
     private AuthenticationManager authenticationManager;
 
-    @RequestMapping("/create")
-    public String create(@RequestBody Admin admin) {
-        Admin p = adminService.create(admin);
-        return p.toString();
+
+    @GetMapping("/testing")
+    public RedirectView testing() {
+        RedirectView redirectView = new RedirectView();
+        redirectView.setUrl("http://localhost:4200/admin");
+        return redirectView;
     }
 
-    @PostMapping("/authenticate")
-    private ResponseEntity<?> authenticateClient(@RequestBody AuthenticationRequest authenticationRequest) throws Exception{
-        String email=authenticationRequest.getName();
-
-        try {
-            authenticationManager.authenticate(
-                    new UsernamePasswordAuthenticationToken(authenticationRequest.getName(), authenticationRequest.getPassword()));
-        }catch (Exception e){
-            return ResponseEntity.ok(new AuthenticationResponse("Invalid Username or Password")) ;
-        }
-        UserDetails loadedUser=adminService.loadUserByUsername(email);
-        String generatedToken =jwtUtil.generateToken(loadedUser);
-        return ResponseEntity.ok(new AuthenticationResponse(generatedToken));
-    }
-    @RequestMapping("/get")
-    public String getAdmin(@RequestBody AuthenticationRequest authenticationRequest){
-        Admin p=adminService.getByName(authenticationRequest.getName());
-        return p.toString();
-    }
+    @CrossOrigin(origins="*",allowedHeaders = "*")
     @GetMapping("/test")
     public String test(){
-        return "Admin Tested";
+        return "working";
     }
 
+    @CrossOrigin(origins="*",allowedHeaders = "*")
+    @RequestMapping("/get")
+    public Admin getAdmin(@RequestBody AuthenticationRequest authenticationRequest){
+        Admin p=adminService.getByEmail(authenticationRequest.getEmail());
+        return p;
+    }
+    @CrossOrigin(origins="*",allowedHeaders = "*")
     @RequestMapping("/getlogin")
-    public String getAdminlogin(@RequestBody AuthenticationRequest authenticationRequest){
-        Admin p=adminService.getByName(authenticationRequest.getName());
+    public String getAdmin(@RequestParam String email) {
+        Admin p = adminService.getByEmail(email);
         return p.toString();
     }
 
+    @CrossOrigin(origins="*",allowedHeaders = "*")
     @RequestMapping("/getAll")
     public List<Admin> getAll(){
         return adminService.getAll();
     }
 
-
+    @CrossOrigin(origins="*",allowedHeaders = "*")
     @RequestMapping("/update")
-    public String update(@RequestParam String id,@RequestParam String Name, @RequestParam String password) {
-        Admin p = adminService.update(id,Name, password);
+    public String update(@RequestBody Admin req) {
+        Admin p = adminService.update(req.getName(),req.getPassword(), req.getEmail(),req.getContact());
         return p.toString();
     }
 
-    @RequestMapping("/admin/delete")
+    @RequestMapping("/delete")
     public String delete(@RequestParam String firstName) {
         adminService.delete(firstName);
         return "Deleted "+firstName;
     }
 
-    @RequestMapping ("/admin/deleteAll")
+    @RequestMapping ("/deleteAll")
     public String deleteAll() {
         adminService.deleteAll();
         return "Deleted all records";

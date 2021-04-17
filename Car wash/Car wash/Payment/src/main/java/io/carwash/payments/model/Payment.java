@@ -1,9 +1,6 @@
 package io.carwash.payments.model;
 
-
-
 import java.io.Serializable;
-
 
 public class Payment implements Serializable{
     private int paymentId;

@@ -12,6 +12,7 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
+import org.springframework.web.servlet.view.RedirectView;
 
 import java.util.List;
 
@@ -38,6 +39,13 @@ public class CustomerController {
     public String create(@RequestBody Customer customer) {
         Customer p = customerService.create(customer);
         return p.toString();
+    }
+
+    @GetMapping("/testing")
+    public RedirectView testing() {
+        RedirectView redirectView = new RedirectView();
+        redirectView.setUrl("http://localhost:4200/admin");
+        return redirectView;
     }
 
     @CrossOrigin(origins="*",allowedHeaders = "*")

@@ -7,6 +7,7 @@ import { SigninComponent } from './signin/signin.component';
 import { SignupComponent } from './signup/signup.component';
 import { ProfileComponent } from './profile/profile.component';
 import { PriceComponent } from './price/price.component';
+import { AdminComponent } from './admin/admin.component';
 
 const routes: Routes = [
   {path:"",redirectTo:"/home",pathMatch:'full'},
@@ -16,7 +17,8 @@ const routes: Routes = [
   {path:"services",component:ServicespageComponent},
   {path:"contactus",component:ContactusComponent},
   {path:"profile",component:ProfileComponent},
-  {path:"price",component:PriceComponent}
+  {path:"price",component:PriceComponent},
+  {path:"admin",component:AdminComponent}
 ];
 
 @NgModule({
@@ -25,4 +27,5 @@ const routes: Routes = [
 })
 export class AppRoutingModule { }
 export const routingcomponents =[HomeComponent,SignupComponent,SigninComponent,
-                                 ContactusComponent, ServicespageComponent,ProfileComponent,PriceComponent]
+                                 ContactusComponent, ServicespageComponent,ProfileComponent,
+                                 PriceComponent,AdminComponent]

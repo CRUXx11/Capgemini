@@ -1,1 +1,48 @@
-<p>admin works!</p>
+
+<div class="container text-center">
+    <table mat-table [dataSource]="dataSource" #mytable class="my-table mat-elevation-z8">
+  
+      <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+  
+  
+      <!-- Name Column -->
+      <ng-container matColumnDef="name">
+        <th style=" text-align: center;" mat-header-cell *matHeaderCellDef> Name </th>
+        <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+      </ng-container>
+  
+        <!-- Email Column -->
+        <ng-container matColumnDef="password">
+          <th style=" text-align: center;" mat-header-cell *matHeaderCellDef> Password </th>
+          <td mat-cell *matCellDef="let element"> {{element.password}} </td>
+        </ng-container>
+
+          <!-- Email Column -->
+          <ng-container matColumnDef="email">
+            <th style=" text-align: center;" mat-header-cell *matHeaderCellDef> Email </th>
+            <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+          </ng-container>
+
+          <!-- Contact Column -->
+          <ng-container matColumnDef="contact">
+            <th style=" text-align: center;" mat-header-cell *matHeaderCellDef> Contact </th>
+            <td mat-cell *matCellDef="let element"> {{element.contact}} </td>
+          </ng-container>
+
+      <!-- Action Column -->
+      <ng-container matColumnDef="action">
+        <th style=" text-align: center;" mat-header-cell *matHeaderCellDef> Action </th>
+        <td mat-cell *matCellDef="let element" class="action-link"> 
+          <button class="btn btn-primary" (click)="openDialog('Update',element)">Edit</button> | 
+          <button class="btn btn-primary" (click)="openDialog('Delete',element)">Delete</button>  
+        </td>
+      </ng-container>
+  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+    <button (click)="gett()" style="margin-left: 42%;margin-top: 5%;" class="btn btn-primary">Fetch</button>
+  </div>
+
+  <button (click)="notadmin()" style="margin-left: 42%;margin-top: 5%;" class="btn btn-primary">Get back to home</button>

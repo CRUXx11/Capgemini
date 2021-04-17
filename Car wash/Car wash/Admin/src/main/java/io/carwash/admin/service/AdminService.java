@@ -22,24 +22,26 @@ public class AdminService implements UserDetailsService {
     private AdminRepo adminRepo;
 
     //Create operation
-    public Admin create(Admin admin) {
-        return adminRepo.save(admin);
+    public Admin create(Admin customer) {
+        return adminRepo.save(customer);
     }
     //Retrieve operation
     public List<Admin> getAll(){
         return adminRepo.findAll();
     }
 
-    public Admin getByName(String name)
+    public Admin getByEmail(String email)
     {
-        return adminRepo.findByName(name);
+        return adminRepo.findByEmail(email);
     }
 
     //Update operation
-    public Admin update(String id,String name, String password) {
-        Admin p = adminRepo.findByName(name);
-        p.setName(name);
+    public Admin update(String Name, String password,String email,String contact) {
+        Admin p = adminRepo.findByEmail(email);
+        p.setName(Name);
         p.setPassword(password);
+        p.setEmail(email);
+        p.setContact(contact);
         return adminRepo.save(p);
     }
 
@@ -49,17 +51,17 @@ public class AdminService implements UserDetailsService {
         adminRepo.deleteAll();
     }
 
-    public void delete(String name) {
-        Admin p = adminRepo.findByName(name);
+    public void delete(String email) {
+        Admin p = adminRepo.findByEmail(email);
         adminRepo.delete(p);
     }
     @Override
-    public UserDetails loadUserByUsername(String name) throws UsernameNotFoundException {
-        Admin p=adminRepo.findByName(name);
+    public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
+        Admin p=adminRepo.findByEmail(email);
         if(p == null) {
             throw new UsernameNotFoundException("User not found");
         }
-        List<SimpleGrantedAuthority> authorities = Arrays.asList(new SimpleGrantedAuthority("admin"));
-        return new User(p.getName(),p.getPassword(),authorities);
+        List<SimpleGrantedAuthority> authorities = Arrays.asList(new SimpleGrantedAuthority("customer"));
+        return new User(p.getEmail(),p.getPassword(),authorities);
     }
 }

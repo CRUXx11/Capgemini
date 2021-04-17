@@ -22,4 +22,8 @@ public class FallbackController {
     public Mono<String> customerServiceFallback(){
         return Mono.just("Customer Service is taking too long to respond or is down.Please try again later");
     }
+    @RequestMapping("/adminFallback")
+    public Mono<String> adminServiceFallback(){
+        return Mono.just("Admin Service is taking too long to respond or is down.Please try again later");
+    }
 }

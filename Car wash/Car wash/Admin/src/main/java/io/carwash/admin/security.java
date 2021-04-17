@@ -1,7 +1,7 @@
 package io.carwash.admin;
 
 import io.carwash.admin.service.AdminService;
-import io.carwash.admin.service.JwtFilterReq;
+//import io.carwash.admin.service.JwtFilterReq;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -16,8 +16,7 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.password.NoOpPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
-import org.springframework.web.servlet.config.annotation.CorsRegistry;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+
 
 @Configuration
 @EnableWebSecurity
@@ -26,8 +25,8 @@ public class security extends WebSecurityConfigurerAdapter {
     @Autowired
     private AdminService userDetailsService;
 
-    @Autowired
-    private JwtFilterReq jwtFilterReq;
+//    @Autowired
+//    private JwtFilterReq jwtFilterReq;
 
     @Override
     public void configure(WebSecurity web) throws Exception {
@@ -51,20 +50,20 @@ public class security extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.csrf().disable()
-                .authorizeRequests()
-                .antMatchers("/admin/authenticate").permitAll()
-                .antMatchers("/admin/test").permitAll()
-                .antMatchers("/admin/create").permitAll()
-                .antMatchers(HttpMethod.OPTIONS,"/**").permitAll()
-                .anyRequest().authenticated().and()
-                .sessionManagement()
-                .sessionCreationPolicy(SessionCreationPolicy.STATELESS);
-        ;http.addFilterBefore(jwtFilterReq, UsernamePasswordAuthenticationFilter.class);
+                .authorizeRequests().anyRequest().permitAll().and().httpBasic();
+//                .antMatchers("/admin/authenticate").permitAll()
+//                .antMatchers("/admin/test").permitAll()
+//                .antMatchers("/admin/create").permitAll()
+//                .antMatchers(HttpMethod.OPTIONS,"/**").permitAll()
+//                .anyRequest().authenticated().and()
+//                .sessionManagement()
+//                .sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+       // http.addFilterBefore(jwtFilterReq, UsernamePasswordAuthenticationFilter.class);
     }
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth.userDetailsService(userDetailsService);
+        auth.inMemoryAuthentication().withUser("Administrator").password("CarWashAdmin").roles("ADMIN");
     }
 
 

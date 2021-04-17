@@ -135,6 +135,8 @@ a:focus {
 .nav-bar {
     position: sticky;
     background: black;
+    border-bottom: 3px solid orange;
+    border-top: 3px solid orange;
 }
 .nav-bar.nav-sticky {
     position: sticky;
@@ -244,10 +246,11 @@ a:focus {
     font-size: 60px;
     font-weight: 700;
     letter-spacing: 5px;
+    font-size: 50px;
 }
 
 .price .price-header h2 span {
-    font-size: 25px;
+    font-size: 20px;
     line-height: 55px;
 }
 
