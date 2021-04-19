@@ -1,8 +1,9 @@
-.addrow{
-    left: 45%;
-}
 
 table{
     width: 100%;
-    
+    border: 1px solid blue;
+}
+#fetch{
+    position: relative;
+    margin-left: -15%;
 }

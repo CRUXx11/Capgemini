@@ -10,6 +10,7 @@ export class PriceComponent implements OnInit {
 
   constructor(private router:Router) { }
 
+
   ngOnInit(): void {
   }
   public checklogin(){
@@ -20,4 +21,6 @@ export class PriceComponent implements OnInit {
       this.router.navigate(["profile"]);
     }
   }
+
+ 
 }

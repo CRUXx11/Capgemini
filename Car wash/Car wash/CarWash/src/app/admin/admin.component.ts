@@ -8,6 +8,7 @@ import { Updatecustomer } from './updatecustomer';
 import { Customer } from '../signup/customer';
 export interface UsersData {
   name: string;
+  password:string;
   email:string;
   contact:number
 }
@@ -23,14 +24,11 @@ export class AdminComponent implements OnInit {
   workingStatus:any;
   displayedColumns: string[] = ['name','password', 'email', 'contact','action'];
   dataSource :any;
-  usermodel:Customer=new Customer("","","","")
+  usermodel:Updatecustomer=new Updatecustomer("","","","")
 
   ngOnInit(): void {
 
   }
-
-  
-
   @ViewChild(MatTable,{static:true}) table: MatTable<any>;
 
   constructor(private router:Router,public dialog: MatDialog,private adminservice:AdminService) {
@@ -65,23 +63,27 @@ export class AdminComponent implements OnInit {
   addRowData(row_obj){
      this.dataSource.push({
       name:row_obj.name,
+      password:row_obj.password,
       email:row_obj.email,
-      contact:row_obj.contact
+      contact:row_obj.contact,
     });
     this.table.renderRows();
-    
-    
+    this.usermodel.name=row_obj.name;
+    this.usermodel.password=row_obj.password;
+    this.usermodel.contact=row_obj.contact;
+    this.usermodel.email=row_obj.email;
+ console.log("Hi")
   }
   updateRowData(row_obj){
     this.dataSource = this.dataSource.filter((value,key)=>{
       if(value.email == row_obj.email){
-        this.usermodel.Name=row_obj.name;
+        this.usermodel.name=row_obj.name;
         this.usermodel.password=row_obj.password;
         this.usermodel.contact=row_obj.contact;
         this.usermodel.email=row_obj.email;
         value.name = row_obj.name;
         value.contact=row_obj.contact;
-        console.log(this.usermodel);
+        value.password=row_obj.password;
       }
       this.adminservice.update(this.usermodel).subscribe(
         data=>{
@@ -95,6 +97,11 @@ export class AdminComponent implements OnInit {
     this.dataSource = this.dataSource.filter((value,key)=>{
       return value.email != row_obj.email;
     });
+    this.adminservice.delete(row_obj.email).subscribe(
+      data=>{
+        console.log("deleted",data);
+      }
+    )
   }
 
   public notadmin(){

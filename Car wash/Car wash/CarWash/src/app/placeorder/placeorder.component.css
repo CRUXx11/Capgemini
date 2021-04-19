@@ -1,0 +1,207 @@
+/* body {
+    color: black;
+    font-weight: 400;
+    background: gray;
+    font-family: 'Barlow', sans-serif;
+} */
+
+h1,
+h2, 
+h3, 
+h4,
+h5, 
+h6 {
+    color: black;
+}
+.body{
+    background-color: wheat;
+}
+
+/* a {
+    color: black;
+    transition: .3s;
+}
+
+a:hover,
+a:active,
+a:focus {
+    color: orange;
+    outline: none;
+    text-decoration: none;
+}
+*/
+.btn.btn-custom {
+    padding: 10px 30px 12px 30px;
+    text-align: center; 
+    font-size: 16px;
+    font-weight: 800;
+    color: #ffffff;
+    background: black;
+    border: solid white;
+    border-radius: 60px;
+    box-shadow: inset 0 0 0 0 #202C45;
+    transition: ease-in-out 0.5s;
+    -webkit-transition: ease-in-out 0.5s;
+    -moz-transition: ease-in-out 0.5s;
+}
+
+.btn.btn-custom:hover {
+    color: black;
+    background: black;
+    box-shadow: inset 200px 0 0 0 yellow;
+}
+/*
+.btn:focus,
+.form-control:focus {
+    box-shadow: none;
+} */
+
+.container-fluid {
+    max-width: 1366px;
+}
+
+/* [class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+    font-size: inherit;
+    margin-left: 0;
+} */
+/* #loader {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity .3s ease-out, visibility 0s linear .3s;
+    -o-transition: opacity .3s ease-out, visibility 0s linear .3s;
+    transition: opacity .3s ease-out, visibility 0s linear .3s;
+    z-index: 999;
+}
+
+#loader.show {
+    -webkit-transition: opacity .6s ease-out, visibility 0s linear 0s;
+    -o-transition: opacity .6s ease-out, visibility 0s linear 0s;
+    transition: opacity .6s ease-out, visibility 0s linear 0s;
+    visibility: visible;
+    opacity: 1;
+}
+
+#loader .loader {
+    position: relative;
+    width: 45px;
+    height: 45px;
+    border: 5px solid #dddddd;
+    border-top: 5px solid #E81C2E;
+    border-radius: 50%;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    width: 44px;
+    height: 44px;
+    text-align: center;
+    line-height: 1;
+    font-size: 22px;
+    right: 15px;
+    bottom: 15px;
+    transition: .5s;
+    background: #E81C2E;
+    border-radius: 44px;
+    z-index: 9;
+}
+
+.back-to-top i {
+    color: #ffffff;
+    padding-top: 10px;
+}
+
+.back-to-top:hover {
+    background: #202C45;
+} */
+
+
+
+.nav-bar {
+    position: sticky;
+    background: black;
+    border-bottom: 3px solid orange;
+    border-top: 3px solid orange;
+}
+.nav-bar.nav-sticky {
+    position: sticky;
+    width: 100%;
+    top: 0;
+    left: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
+    z-index: 11;
+}
+.nav-bar .navbar {
+    padding: 20px 0;
+    background: black !important;
+    transition: .3s;
+   
+}
+.nav-bar.nav-sticky .navbar {
+    padding: 5px 0;
+}
+.navbar-dark .navbar-nav .nav-link,
+.navbar-dark .navbar-nav .nav-link:focus,
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+    color: #ffffff;
+    padding: 15px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    
+}
+.navbar-dark .navbar-nav .nav-link:hover{
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    color: yellow;
+  }
+  .navbar-dark .navbar-nav .nav-link {
+    border-bottom: 2px solid transparent;
+  }
+  
+  .navbar-dark .navbar-nav .nav-link:hover {
+    border-bottom: 2px solid yellow;
+    border-radius: 25%;
+    color: yellow;
+  } 
+  #navbarCollapse .navbar-nav .active{
+    border-bottom: 2px solid yellow;
+    border-width: 3px;
+    border-radius: 25%;
+    color: yellow;
+}
+.register{
+    background: -webkit-linear-gradient(top, orange, red);
+    margin-top: 3%;
+    padding: 3%;
+    border-radius: 2.5rem;
+}
+.nav-tabs .nav-link{
+    border: 1px solid transparent;
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+    color: white;
+}

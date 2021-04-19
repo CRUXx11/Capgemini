@@ -1,0 +1,4 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://CRUXx:Crux%4011@cluster0.zuegb.mongodb.net/Orders?retryWrites=true&w=majority

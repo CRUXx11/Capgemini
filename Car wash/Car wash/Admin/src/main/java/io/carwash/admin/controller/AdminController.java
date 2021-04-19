@@ -22,6 +22,11 @@ public class AdminController {
     @Autowired
     private AuthenticationManager authenticationManager;
 
+    @RequestMapping("/create")
+    public String create(@RequestBody Admin admin) {
+        Admin p = adminService.create(admin);
+        return p.toString();
+    }
 
     @GetMapping("/testing")
     public RedirectView testing() {
@@ -32,8 +37,10 @@ public class AdminController {
 
     @CrossOrigin(origins="*",allowedHeaders = "*")
     @GetMapping("/test")
-    public String test(){
-        return "working";
+    public RedirectView test(){
+        RedirectView redirectView=new RedirectView();
+        redirectView.setUrl("http://localhost:4200/admin");
+        return redirectView;
     }
 
     @CrossOrigin(origins="*",allowedHeaders = "*")
@@ -65,7 +72,7 @@ public class AdminController {
     @RequestMapping("/delete")
     public String delete(@RequestParam String firstName) {
         adminService.delete(firstName);
-        return "Deleted "+firstName;
+        return firstName;
     }
 
     @RequestMapping ("/deleteAll")

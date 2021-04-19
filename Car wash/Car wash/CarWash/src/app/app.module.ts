@@ -11,18 +11,13 @@ import {MatFormFieldModule } from '@angular/material/form-field';
 import {MatInputModule } from '@angular/material/input';
 import {MatButtonModule } from '@angular/material/button';
 import {MatTableModule } from '@angular/material/table';
-import { DialogBoxComponent } from './dialog-box/dialog-box.component';
-import { HfooterComponent } from './hfooter/hfooter.component';
-import { HeaderComponent } from './header/header.component';
+import {MatDatepickerModule } from '@angular/material/datepicker';
 
 // import { TokenInterceptorService } from './token-interceptor.service';
 @NgModule({
   declarations: [
     AppComponent,
     routingcomponents,
-    DialogBoxComponent,
-    HfooterComponent,
-    HeaderComponent,
   ],
   imports: [
     BrowserModule,
@@ -33,7 +28,7 @@ import { HeaderComponent } from './header/header.component';
     BrowserAnimationsModule,
     MatIconModule,
     MatTableModule,
-    MatDialogModule,MatFormFieldModule,MatInputModule,MatButtonModule,
+    MatDialogModule,MatFormFieldModule,MatInputModule,MatButtonModule,MatDatepickerModule
   ],
   providers: [
     // {

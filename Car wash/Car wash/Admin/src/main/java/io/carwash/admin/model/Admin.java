@@ -14,8 +14,8 @@ public class Admin implements Serializable {
     String email;
     String contact;
 
-    public Admin(String name, String password, String email, String contact) {
-        this.Name = name;
+    public Admin(String Name, String password, String email, String contact) {
+        this.Name = Name;
         this.password = password;
         this.email = email;
         this.contact = contact;
@@ -40,21 +40,22 @@ public class Admin implements Serializable {
     }
 
 
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
     public String getName() {
         return Name;
     }
 
     public void setName(String name) {
         Name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "Admin{" +
+                "Name='" + Name + '\'' +
+                ", password='" + password + '\'' +
+                ", email='" + email + '\'' +
+                ", contact='" + contact + '\'' +
+                '}';
     }
 
     public String getPassword() {
