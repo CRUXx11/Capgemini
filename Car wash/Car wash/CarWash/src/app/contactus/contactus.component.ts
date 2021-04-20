@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ContactService } from './contact.service';
 
 @Component({
   selector: 'app-contactus',
@@ -8,7 +9,14 @@ import { Router } from '@angular/router';
 })
 export class ContactusComponent implements OnInit {
 
-  constructor(private router:Router) { }
+  constructor(private router:Router,private contactservice:ContactService) { }
+
+    value={
+      name:"",
+      email:"",
+      subject:"",
+      message:""
+    }
 
   ngOnInit(): void {
   }
@@ -19,6 +27,9 @@ export class ContactusComponent implements OnInit {
     else{
       this.router.navigate(["profile"]);
     }
+  }
+  onSubmit(){
+
   }
 
 }

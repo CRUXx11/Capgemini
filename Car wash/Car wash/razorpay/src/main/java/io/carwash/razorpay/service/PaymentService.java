@@ -1,7 +1,6 @@
 package io.carwash.razorpay.service;
 
-import com.razorpay.Payment;
-import io.carwash.razorpay.model.PaymentModel;
+import com.razorpay.Order;
 import io.carwash.razorpay.repository.PaymentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -14,10 +13,10 @@ public class PaymentService {
     @Autowired
     private PaymentRepository paymentRepository;
 
-    //Create operation
-    public List<Payment> store(List<Payment> payment) {
+    public List<Order> store(List<Order> orders){
         paymentRepository.deleteAll();
-        return paymentRepository.saveAll(payment);
+       return paymentRepository.saveAll(orders);
     }
+
 
 }

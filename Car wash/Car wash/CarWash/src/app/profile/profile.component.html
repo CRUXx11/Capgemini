@@ -1,85 +1,122 @@
 <div class="body">
     <div class="nav-bar sticky-top">
-    <div class="container">
-        <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
-            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-                <div class="navbar-nav mr-auto ">
-                    <a routerLink="/home" class="nav-item nav-link px-4">Home</a>
-                    <a routerLink="/services" class="nav-item px-4 nav-link">Services</a>
-                    <a routerLink="/price" class="nav-item nav-link px-4">Price</a>
-                    <a routerLink="/about" class="nav-item nav-link px-4">About Us</a>
-                    <a routerLink="/contactus" class="nav-item nav-link px-4">Contact</a>
-                    <a routerLink="/profile"  (click)="checklogin()" class="nav-item nav-link px-4 active">My Profile</a>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                    <div class="navbar-nav mr-auto ">
+                        <a routerLink="/home" class="nav-item nav-link px-4">Home</a>
+                        <a routerLink="/services" class="nav-item px-4 nav-link">Services</a>
+                        <a routerLink="/price" class="nav-item nav-link px-4">Price</a>
+                        <a routerLink="/about" class="nav-item nav-link px-4">About Us</a>
+                        <a routerLink="/contactus" class="nav-item nav-link px-4">Contact</a>
+                        <a routerLink="/profile" (click)="checklogin()" class="nav-item nav-link px-4 active">My
+                            Profile</a>
+                    </div>
+                    <div class="ml-auto">
+                        <a class="btn btn-custom" routerLink="/price">Book now</a>
+                    </div>
                 </div>
-                <div class="ml-auto">
-                    <a class="btn btn-custom" href="#">Book now</a>
-                </div>
-            </div>
-        </nav>
+            </nav>
+        </div>
     </div>
-</div>
-<div class="container">
-    <div class="main-body">
-        <div class="row gutters-sm">
-            <div class="col-md-4 mb-3">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="d-flex flex-column align-items-center text-center">
-                            <img src="../../assets/imgs/profile.png" alt="Admin"
-                                class="rounded-circle" width="150">
-                            <div class="mt-3">
-                                <h4>John Doe</h4>
-                                <p class="text-secondary mb-1">Full Stack Developer</p>
-                                <p class="text-muted font-size-sm">Bay Area, San Francisco, CA</p>
-                                <button class="btn btn-primary">Update</button>&nbsp;
-                                <button (click)="logout()" class="btn btn-outline-primary">Logout</button>
+    <div class="container">
+        <div class="main-body">
+            <div class="row gutters-sm">
+                <div class="col-md-4 mb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex flex-column align-items-center text-center">
+                                <img src="../../assets/imgs/profile.png" alt="Admin" class="rounded-circle" width="150">
+                                <div class="mt-3">
+                                    <h4>John Doe</h4>
+                                    <p class="text-secondary mb-1">Full Stack Developer</p>
+                                    <p class="text-muted font-size-sm">Bay Area, San Francisco, CA</p>
+                                    <button (click)="logout()" class="btn btn-outline-primary">Logout</button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-8">
-                <div class="card mb-3">
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-sm-3">
-                                <h3 class="mb-0">Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h3>
+                <div class="col-md-8">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <h3 class="mb-0">Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    </h3>
+                                </div>
+                                <h2>:</h2>&nbsp;
+                                <div class="col-sm-14 text-secondary">
+                                    <h3>&nbsp;&nbsp;&nbsp; {{name}}</h3>
+                                </div>
                             </div>
-                            <h2>:</h2>&nbsp;
-                            <div class="col-sm-14 text-secondary">
-                                <h3>&nbsp;&nbsp;&nbsp; {{name}}</h3>
+                            <hr>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <h3 class="mb-0">Email
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h3>
+                                </div>
+                                <h2>:</h2>
+                                <div class="col-sm-14 text-secondary">
+                                    <h3>{{email}}</h3>
+                                </div>
                             </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <h3 class="mb-0">Mobile &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h3>
+                                </div>
+                                <h2>:</h2>
+                                <div class="col-sm-14 text-secondary">
+                                    <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{contact}}</h3>
+                                </div>
+                            </div>
+               
+                            <div *ngIf="paymentdetails==true;else elseblock" class="row">
+                              
+                            </div><br><br>
+                            <ng-template #elseblock>
+                                <form>
+                                    <div class="form-group">
+                                        <span class="material-icons">money</span>
+                                        <label class="form-label">OrderId</label>
+                                        <input type="text" name="paymentId" class="form-control" [(ngModel)]="payment.paymentId" required />
+                                    </div>
+                                </form>
+                                <button (click)="togglepayment()" class="btn btn-primary">Get payment</button>
+                            </ng-template>
+                            <div *ngIf="paymentfetch">
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <h3 class="mb-0">Amount &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h3>
+                                    </div>
+                                    <h2>:</h2>
+                                    <div class="col-sm-14 text-secondary">
+                                        <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{this.stat["amount_paid"]/100}} Rs</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div *ngIf="paymentfetch">
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <h3 class="mb-0">Status &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h3>
+                                    </div>
+                                    <h2>:</h2>
+                                    <div class="col-sm-14 text-secondary">
+                                        <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Paid</h3>
+                                    </div>
+                                </div>
+                            </div>
+                           
                         </div>
-                        <hr>
-                        <div class="row">
-                            <div class="col-sm-3">
-                                <h3 class="mb-0">Email
-                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h3>
-                            </div>
-                            <h2>:</h2>
-                            <div class="col-sm-14 text-secondary">
-                                <h3>{{email}}</h3>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="row">
-                            <div class="col-sm-3">
-                                <h3 class="mb-0">Mobile &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h3>
-                            </div>
-                            <h2>:</h2>
-                            <div class="col-sm-14 text-secondary">
-                                <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{contact}}</h3>
-                            </div>
-                        </div>
-                        
                     </div>
-                </div>
 
+                </div>
             </div>
         </div>
     </div>
-</div>
 </div>

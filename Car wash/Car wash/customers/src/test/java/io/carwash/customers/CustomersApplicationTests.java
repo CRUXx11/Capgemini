@@ -47,6 +47,13 @@ class CustomersApplicationTests {
 		assertEquals(2, customerService.getAll().size());
 	}
 
+	//test for getlogin and get methods
+	@Test
+	public void getlogin() {
+		Customer c = new Customer("test","pass2","test2@test2.com","1231231231");
+		when(customerRepo.findByEmail("test2@test2.com")).thenReturn(c);
+		assertEquals(c.getEmail(),"test2@test2.com");
+	}
 
 
 }
