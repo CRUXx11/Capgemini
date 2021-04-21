@@ -11,7 +11,7 @@ import { AdminComponent } from './admin/admin.component';
 import { HfooterComponent } from './hfooter/hfooter.component';
 import { HeaderComponent } from './header/header.component';
 import { DialogBoxComponent } from './dialog-box/dialog-box.component';
-import { PlaceorderComponent } from './placeorder/placeorder.component';
+import { AboutusComponent } from './aboutus/aboutus.component';
 
 const routes: Routes = [
   {path:"",redirectTo:"/home",pathMatch:'full'},
@@ -23,7 +23,8 @@ const routes: Routes = [
   {path:"profile",component:ProfileComponent},
   {path:"price",component:PriceComponent},
   {path:"admin",component:AdminComponent},
-  {path:"placeorder",component:PlaceorderComponent}
+  {path:"about",component:AboutusComponent}
+ 
 ];
 
 @NgModule({
@@ -34,4 +35,4 @@ export class AppRoutingModule { }
 export const routingcomponents =[HomeComponent,SignupComponent,SigninComponent,
                                  ContactusComponent, ServicespageComponent,ProfileComponent,
                                  PriceComponent,AdminComponent,HfooterComponent,
-                                 HeaderComponent,DialogBoxComponent,PlaceorderComponent]
+                                 HeaderComponent,DialogBoxComponent,AboutusComponent]

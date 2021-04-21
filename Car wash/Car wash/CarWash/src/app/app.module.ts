@@ -12,12 +12,12 @@ import {MatInputModule } from '@angular/material/input';
 import {MatButtonModule } from '@angular/material/button';
 import {MatTableModule } from '@angular/material/table';
 import {MatDatepickerModule } from '@angular/material/datepicker';
-
 // import { TokenInterceptorService } from './token-interceptor.service';
 @NgModule({
   declarations: [
     AppComponent,
     routingcomponents,
+   
   ],
   imports: [
     BrowserModule,
@@ -33,8 +33,9 @@ import {MatDatepickerModule } from '@angular/material/datepicker';
   providers: [
     // {
     // provide: HTTP_INTERCEPTORS,
-    // useClass:TokenInterceptorService
-    //}
+    // useClass:TokenInterceptorService,
+    // multi:true
+    // }
   ],
   bootstrap:[AppComponent]
 })

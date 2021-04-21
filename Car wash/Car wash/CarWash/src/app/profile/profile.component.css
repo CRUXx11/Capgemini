@@ -162,3 +162,13 @@ body{
 .col-md-4{
     margin-top: 3%;
 }
+#order{
+    font-weight: 500;
+    font-size: 120%;
+    margin-left: 1.5%;
+}
+.material-icons{
+    display:inline-flex;
+    vertical-align:-5px;
+    
+}

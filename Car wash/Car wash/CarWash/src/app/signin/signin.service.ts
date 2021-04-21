@@ -13,7 +13,8 @@ export class SigninService {
       .pipe(catchError(this.errorHandler));     
   }
   public test(){
-    return this.http.get('http://localhost:9089/customers/test',{ responseType: 'text' as 'json' })
+    return this.http.get('http://localhost:9092/customers/test',{ responseType: 'text' as 'json' })
+   .pipe(catchError(this.errorHandler))
   }
   public getlogin(user){
     return this.http.post('http://localhost:9092/customers/get', user)
@@ -26,6 +27,7 @@ export class SigninService {
 
   
   errorHandler(error: HttpErrorResponse) {
+    window.alert(error);
     return throwError(error);
   }
 }

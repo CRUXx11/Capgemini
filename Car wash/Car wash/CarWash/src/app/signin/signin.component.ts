@@ -45,8 +45,12 @@ export class SigninComponent implements OnInit {
       this.signinservice.test().subscribe(
         data=>{
           this.workingStatus=data;
+          if(this.workingStatus=="Customer Service is taking too long to respond or is down.Please try again later"){
+            window.alert("Service is down.Please try after sometime");
+          }
+          else{
           console.log(this.workingStatus);
-          this.gett();
+          this.gett();}
         }
       )
     }

@@ -1,0 +1,110 @@
+<div class="body">
+    <div class="nav-bar  sticky-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                    <div class="navbar-nav mr-auto ">
+                        <a routerLink="/home" class="nav-item nav-link px-4 ">Home</a>
+                        <a routerLink="/services" class="nav-item px-4 nav-link">Services</a>
+                        <a routerLink="/price" class="nav-item nav-link px-4">Price</a>
+                        <a routerLink="/about" (click)="refresh()" class="nav-item nav-link px-4 active">About Us</a>
+                        <a routerLink="/contactus"  class="nav-item nav-link px-4">Contact</a>
+                        <a routerLink="/profile" (click)="checklogin()" class="nav-item nav-link px-4">My Profile</a>
+                    </div>
+                    <div class="ml-auto">
+                        <a class="btn btn-custom" routerLink="/price">Book now</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <!-- About Start -->
+    <div class="about">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="about-img">
+                        <img src="../../assets/imgs/about.jpg" alt="Image">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="section-header text-left">
+                        <p>About Us</p><br>
+                        <h2>Car washing and </h2>
+                        <h2>detailing</h2>
+                    </div>
+                    <div class="about-content">
+                        <p>
+                            Lorem ipsum dolor sit amet elit. In vitae turpis. Donec in hendre dui, vel blandit massa. Ut
+                            vestibu suscipi cursus. Cras quis porta nulla, ut placerat risus. Aliquam nec magna eget
+                            velit luctus dictum
+                        </p>
+                        <ul>
+                            <li><i class="far fa-check-circle"></i>Seats washing</li>
+                            <li><i class="far fa-check-circle"></i>Vacuum cleaning</li>
+                            <li><i class="far fa-check-circle"></i>Interior wet cleaning</li>
+                            <li><i class="far fa-check-circle"></i>Window wiping</li>
+                        </ul>
+                        <a class="btn btn-custom" href="">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><br><br>
+    <!-- About End -->
+    <hr>
+<br>
+<div class="demo">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div id="testimonial-slider" class="owl-carousel">
+                    <div class="testimonial">
+                        <span class="icon fa fa-quote-left"></span>
+                        <p class="description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam justo neque, aliquet sit amet elementum vel, vehicula eget eros. 
+                        </p>
+                        <div class="testimonial-content">
+                            <div class="pic"><img src="../../assets/imgs/naruto.jpg" alt=""></div>
+                            <h3 class="title">Naruto</h3>
+                        </div>
+                    </div>
+                    <div class="testimonial">
+                        <span class="icon fa fa-quote-left"></span>
+                        <p class="description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam justo neque, aliquet sit amet elementum vel, vehicula eget eros. 
+                        </p>
+                        <div class="testimonial-content">
+                            <div class="pic"><img src="../../assets/imgs/ochako.jpg" alt=""></div>
+                            <h3 class="title">Ochako</h3>
+                        </div>
+                    </div>
+                    <div class="testimonial">
+                        <span class="icon fa fa-quote-left"></span>
+                        <p class="description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam justo neque, aliquet sit amet elementum vel, vehicula eget eros. 
+                        </p>
+                        <div class="testimonial-content">
+                            <div class="pic"><img src="../../assets/imgs/tanjiro.jpg" alt=""></div>
+                            <h3 class="title">Tanjiro</h3>
+                        </div>
+                    </div>
+                    <div class="testimonial">
+                        <span class="icon fa fa-quote-left"></span>
+                        <p class="description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam justo neque, aliquet sit amet elementum vel, vehicula eget eros. 
+                        </p>
+                        <div class="testimonial-content">
+                            <div class="pic"><img src="../../assets/imgs/spiderman.webp" alt=""></div>
+                            <h3 class="title">Hisoka</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

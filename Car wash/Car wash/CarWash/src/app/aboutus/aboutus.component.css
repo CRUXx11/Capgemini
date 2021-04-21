@@ -193,15 +193,146 @@ a:focus {
     border-radius: 25%;
     color: yellow;
 }
-.register{
-    background: -webkit-linear-gradient(top, orange, red);
-    margin-top: 3%;
-    padding: 3%;
-    border-radius: 2.5rem;
+/*******************************/
+/********** About CSS **********/
+/*******************************/
+.about {
+    position: relative;
+    width: 100%;
+    padding: 45px 0 15px 0;
 }
-.nav-tabs .nav-link{
-    border: 1px solid transparent;
-    border-top-left-radius: .25rem;
-    border-top-right-radius: .25rem;
+
+.about .section-header {
+    margin-bottom: 30px;
+    margin-left: 0;
+}
+
+.about .about-img img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+
+.about .about-content {
+    margin-bottom: 30px;
+}
+
+.about .about-content ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin-bottom: 25px;
+}
+
+.about .about-content ul li {
+    margin-bottom: 5px;
+}
+
+.about .about-content ul li i {
+    margin-right: 8px;
+    color: #E81C2E;
+}
+.about .section-header p{
+    font-size: 200%;
+    font-weight: 700;
+  margin-top: -20%;
+  margin-left: 35%;
+  text-decoration: underline red;
+}
+.about .section-header h2{
+    font-size: 300%;
+    font-weight: 700;
+letter-spacing: 2px;
+
+}
+
+/*******************************/
+/******* Testimonial CSS *******/
+/*******************************/
+.demo{ 
+    background: wheat;
+  height: 150%;
+}
+.testimonial{
+    background: black;
+    text-align: center;
+    padding: 30px 30px 50px;
+    margin: 0 15px 100px;
+    position: relative;
+}
+.testimonial:before,
+.testimonial:after{
+    content: "";
+    border-top: 40px solid #fff;
+    border-right: 125px solid transparent;
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+}
+.testimonial:after{
+    border-right: none;
+    border-left: 125px solid transparent;
+    left: auto;
+    right: 0;
+}
+.testimonial .icon{
+    display: inline-block;
+    font-size: 80px;
+    color: orange;
+    margin-bottom: 20px;
+    opacity: 0.6;
+}
+.testimonial .description{
+    font-size: 15px;
     color: white;
+    text-align: left;
+    margin-bottom: 30px;
+    opacity: 0.8;
+}
+.testimonial .testimonial-content{
+    width: 100%;
+    position: absolute;
+    left: 0;
+}
+.testimonial .pic{
+    display: inline-block;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 2px 2px #daad86;
+    overflow: hidden;
+    z-index: 1;
+    position: relative;
+    width: 100px;
+}
+.testimonial .pic img{
+    width: 100%;
+    height: auto;
+}
+.testimonial .title{
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+    text-transform: capitalize;
+    margin: 0 0 5px 0;
+}
+
+.owl-theme .owl-controls{
+    margin-top: 0;
+}
+.owl-theme .owl-controls .owl-page span{
+    width: 32px;
+    height: 10px;
+    background: #fff;
+    border: 2px solid #bd986b;
+    margin: 5px;
+    opacity: 1;
+}
+.owl-theme .owl-controls .owl-page.active span,
+.owl-theme .owl-controls.clickable .owl-page:hover span{
+    background: #ffd9b8;
+    border-color: #fff;
+}
+@media only screen and (max-width: 650px) and (min-width: 400px){
+    .testimonial:before{ border-right: 325px solid transparent; }
+    .testimonial:after{ border-left: 325px solid transparent; }
 }

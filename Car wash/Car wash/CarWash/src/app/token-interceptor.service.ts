@@ -12,7 +12,7 @@
 //     let signinService=this.injector.get(SigninService)
 //     let tokenizedReq = req.clone({
 //       setHeaders: {
-//         Authorization:`Bearer ${signinService.generatetoken}`
+//         Authorization:"Bearer "+localStorage.getItem("token")
 //       }
 //     })
 //     return next.handle(tokenizedReq)

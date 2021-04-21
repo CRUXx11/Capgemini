@@ -77,12 +77,12 @@
                
                             <div *ngIf="paymentdetails==true;else elseblock" class="row">
                               
-                            </div><br><br>
+                            </div><hr>
                             <ng-template #elseblock>
                                 <form>
                                     <div class="form-group">
                                         <span class="material-icons">money</span>
-                                        <label class="form-label">OrderId</label>
+                                        <label class="form-label" id="order">OrderId</label>
                                         <input type="text" name="paymentId" class="form-control" [(ngModel)]="payment.paymentId" required />
                                     </div>
                                 </form>

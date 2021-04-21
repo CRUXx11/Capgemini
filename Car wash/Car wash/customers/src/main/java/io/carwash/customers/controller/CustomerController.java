@@ -5,6 +5,7 @@ import io.carwash.customers.model.AuthenticationResponse;
 import io.carwash.customers.model.Customer;
 import io.carwash.customers.service.CustomerService;
 import io.carwash.customers.util.JwtUtil;
+import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -16,7 +17,7 @@ import org.springframework.web.servlet.view.RedirectView;
 
 import java.util.List;
 
-
+@Api
 @RestController
 @CrossOrigin(origins="*",allowedHeaders = "*")
 @RequestMapping("/customers")
@@ -94,17 +95,5 @@ public class CustomerController {
         Customer p = customerService.update(Name, password,email,contact);
         return p.toString();
     }
-
-//    @RequestMapping("/admin/delete")
-//    public String delete(@RequestParam String firstName) {
-//        customerService.delete(firstName);
-//        return "Deleted "+firstName;
-//    }
-
-//    @RequestMapping ("/admin/deleteAll")
-//    public String deleteAll() {
-//        customerService.deleteAll();
-//        return "Deleted all records";
-//    }
 
 }

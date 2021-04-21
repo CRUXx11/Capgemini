@@ -3,15 +3,22 @@ import { Router } from '@angular/router';
 
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  selector: 'app-aboutus',
+  templateUrl: './aboutus.component.html',
+  styleUrls: ['./aboutus.component.css']
 })
-export class HomeComponent implements OnInit {
+export class AboutusComponent implements OnInit {
 
-  constructor(private router:Router) { }
-
+  constructor(private router:Router) {
+    
+   }
+   dataRefresher: any;
   ngOnInit(): void {
+
+  }
+
+  refresh(){
+    window.location.reload();
   }
   public checklogin(){
     if(localStorage.getItem('email')===null){
@@ -21,8 +28,4 @@ export class HomeComponent implements OnInit {
       this.router.navigate(["profile"]);
     }
   }
-  refresh(){
-    window.location.reload();
-  }
-
 }
